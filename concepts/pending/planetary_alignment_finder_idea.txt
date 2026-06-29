@@ -1,0 +1,3 @@
+Concept: planetary alignment finder
+Description: A micro‑experience inspired by the search query "planetary alignment finder".
+Provide a simple interactive tool (HTML/JS) that lets users explore this idea.

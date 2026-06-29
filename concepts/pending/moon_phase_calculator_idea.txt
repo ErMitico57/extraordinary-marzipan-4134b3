@@ -1,0 +1,3 @@
+Concept: moon phase calculator
+Description: A micro‑experience inspired by the search query "moon phase calculator".
+Provide a simple interactive tool (HTML/JS) that lets users explore this idea.

@@ -1,0 +1,3 @@
+Concept: BMI calculator simple
+Description: A micro‑experience inspired by the search query "BMI calculator simple".
+Provide a simple interactive tool (HTML/JS) that lets users explore this idea.

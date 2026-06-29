@@ -1,0 +1,2 @@
+Concept: star sign compatibility tool
+Description: An interactive love‑compatibility calculator that takes two users' birth dates (or chosen zodiac signs) and analyzes their astrological synastric chart to produce a compatibility score. The result includes a visual “galaxy‑entwined” scorecard, a breakdown of dominant aspects (e.g., trine, square), and a short narrative describing how the two personalities interact in love, friendship, and communication, all framed within the celestial almanac aesthetic.

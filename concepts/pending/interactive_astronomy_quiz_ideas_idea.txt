@@ -1,0 +1,2 @@
+Concept: interactive astronomy quiz ideas
+Description: An interactive web quiz series that presents astronomy questions as “orbit challenges.” Users select from multiple‑choice answers that appear as orbiting planets or stars; each correct answer reveals a snippet of celestial lore (myth, history, or fun fact). The quiz can be themed around constellations, phases, or missions, encouraging repeated play.

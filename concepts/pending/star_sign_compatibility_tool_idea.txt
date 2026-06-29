@@ -1,0 +1,3 @@
+Concept: star sign compatibility tool
+Description: A micro‑experience inspired by the search query "star sign compatibility tool".
+Provide a simple interactive tool (HTML/JS) that lets users explore this idea.

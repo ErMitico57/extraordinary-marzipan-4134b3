@@ -1,0 +1,2 @@
+Concept: bmi calculator simple
+Description: A minimalist BMI calculator that takes height and weight (metric or imperial) and returns the BMI value along with the standard category (underweight, normal, overweight, obese). The UI features a star‑field background and a quick visual gauge (e.g., a circular progress bar) to indicate where the value falls, reinforcing the celestial aesthetic.
