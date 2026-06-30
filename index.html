@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Your Life in Numbers — How Much Have You Lived?</title>
+<meta name="description" content="Enter your birth date and discover, in a beautiful way, how many seconds you've lived, how many times your heart has beaten, how far you've traveled through space — and share it with the world." />
+
+<!-- ============================================================= -->
+<!--  SOCIAL PREVIEW (Open Graph + Twitter Card)                    -->
+<!--  >> Sostituisci l'URL e l'immagine con i tuoi una volta online  -->
+<!-- ============================================================= -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Your Life in Numbers" />
+<meta property="og:description" content="How many breaths? How many heartbeats? How far through space? Discover your life in numbers and share it." />
+<meta property="og:url" content="https://extraordinary-marzipan-4134b3.netlify.app" />
+<meta property="og:image" content="https://extraordinary-marzipan-4134b3.netlify.app/preview.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Your Life in Numbers" />
+<meta name="twitter:description" content="How many breaths? How many heartbeats? How far through space? Discover your life in numbers and share it." />
+<meta name="twitter:image" content="https://extraordinary-marzipan-4134b3.netlify.app/preview.jpg" />
+
+<!-- ============================================================= -->
+<!--  GOOGLE ADSENSE — codice di verifica proprietà sito (attivo)    -->
+<!-- ============================================================= -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4872075268096913" crossorigin="anonymous"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --ink:#0a0f24;
+    --ink-2:#10173a;
+    --panel:#121a3f;
+    --panel-2:#0d1330;
+    --void:#05081a;
+    --line:rgba(232,180,104,.18);
+    --line-soft:rgba(255,255,255,.07);
+    --gold:#e8b468;
+    --gold-2:#f2d29a;
+    --gold-deep:#caa055;
+    --cream:#f3ead9;
+    --muted:#9298bd;
+    --muted-2:#6a7099;
+    --star:#6fa8ff;
+    --serif:'Fraunces', Georgia, 'Times New Roman', serif;
+    --sans:'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    --mono:'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:var(--sans);
+    color:var(--cream);
+    background:
+      radial-gradient(1200px 700px at 50% -10%, #1c2552 0%, transparent 60%),
+      radial-gradient(900px 600px at 85% 20%, #1a1340 0%, transparent 55%),
+      linear-gradient(180deg, var(--ink) 0%, var(--void) 100%);
+    background-attachment:fixed;
+    min-height:100vh;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  /* faint starfield */
+  body::before{
+    content:"";
+    position:fixed; inset:0; z-index:0; pointer-events:none;
+    background-image:
+      radial-gradient(1px 1px at 12% 18%, rgba(255,255,255,.55), transparent),
+      radial-gradient(1px 1px at 28% 62%, rgba(255,255,255,.35), transparent),
+      radial-gradient(1px 1px at 47% 12%, rgba(255,255,255,.5), transparent),
+      radial-gradient(1.4px 1.4px at 66% 78%, rgba(255,255,255,.4), transparent),
+      radial-gradient(1px 1px at 78% 32%, rgba(255,255,255,.45), transparent),
+      radial-gradient(1px 1px at 88% 66%, rgba(255,255,255,.3), transparent),
+      radial-gradient(1px 1px at 8% 86%, rgba(255,255,255,.3), transparent);
+    opacity:.7;
+  }
+
+  .wrap{position:relative; z-index:1; max-width:960px; margin:0 auto; padding:0 22px;}
+
+  /* ---------------- HEADER ---------------- */
+  header.site{padding:34px 0 8px; text-align:center;}
+  .brand{
+    font-family:var(--mono); font-weight:700; letter-spacing:.34em;
+    font-size:12px; color:var(--gold); text-transform:uppercase;
+    display:inline-flex; align-items:center; gap:10px;
+  }
+  .brand::before,.brand::after{content:""; width:26px; height:1px; background:linear-gradient(90deg,transparent,var(--gold));}
+  .brand::after{background:linear-gradient(90deg,var(--gold),transparent);}
+
+  /* ---------------- HERO ---------------- */
+  .hero{padding:30px 0 6px; text-align:center;}
+  .hero h1{
+    font-family:var(--serif); font-weight:600;
+    font-size:clamp(40px, 8vw, 76px); line-height:1.02;
+    margin:14px 0 0; letter-spacing:-.01em;
+  }
+  .hero h1 em{font-style:italic; color:var(--gold-2);}
+  .hero p.lede{
+    color:var(--muted); font-size:clamp(15px,2.4vw,18px);
+    max-width:560px; margin:18px auto 0;
+  }
+
+  /* ---------------- FORM CARD ---------------- */
+  .entry{
+    margin:34px auto 0; max-width:560px;
+    background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.01));
+    border:1px solid var(--line);
+    border-radius:18px; padding:26px 24px 24px;
+    box-shadow:0 30px 80px -40px rgba(0,0,0,.9), inset 0 1px 0 rgba(255,255,255,.05);
+    backdrop-filter:blur(6px);
+  }
+  .entry .eyebrow{
+    font-family:var(--mono); font-size:10.5px; letter-spacing:.28em;
+    text-transform:uppercase; color:var(--gold); text-align:center; margin-bottom:18px;
+  }
+  .field-row{display:flex; gap:14px;}
+  .field{flex:1; margin-bottom:14px;}
+  .field.full{flex-basis:100%;}
+  label{
+    display:block; font-size:12px; font-weight:500; letter-spacing:.04em;
+    color:var(--muted); margin-bottom:7px; text-transform:uppercase;
+  }
+  input{
+    width:100%; padding:13px 14px; border-radius:11px;
+    background:rgba(5,8,26,.6); border:1px solid var(--line-soft);
+    color:var(--cream); font-family:var(--sans); font-size:15px;
+    transition:border-color .2s, box-shadow .2s;
+  }
+  input::placeholder{color:var(--muted-2);}
+  input:focus{outline:none; border-color:var(--gold); box-shadow:0 0 0 3px rgba(232,180,104,.16);}
+  input[type=date], input[type=time]{color-scheme:dark;}
+  .hint{font-size:11.5px; color:var(--muted-2); margin-top:2px;}
+
+  .cta{
+    width:100%; margin-top:8px; padding:15px 18px; border:none; cursor:pointer;
+    border-radius:12px; font-family:var(--sans); font-weight:600; font-size:15.5px;
+    color:#241803; letter-spacing:.01em;
+    background:linear-gradient(180deg, var(--gold-2), var(--gold-deep));
+    box-shadow:0 14px 30px -12px rgba(232,180,104,.6), inset 0 1px 0 rgba(255,255,255,.4);
+    transition:transform .15s, box-shadow .2s, filter .2s;
+  }
+  .cta:hover{transform:translateY(-1px); filter:brightness(1.04);}
+  .cta:active{transform:translateY(0);}
+  .err{color:#ff9b8a; font-size:13px; margin-top:10px; text-align:center; min-height:1px;}
+
+  /* ---------------- RESULTS ---------------- */
+  #results{display:none; padding:18px 0 0;}
+  #results.show{display:block;}
+  .reveal{opacity:0; transform:translateY(18px); animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards;}
+  @keyframes rise{to{opacity:1; transform:none;}}
+
+  .greeting{text-align:center; margin:42px 0 8px;}
+  .greeting .hi{font-family:var(--serif); font-size:clamp(26px,5vw,40px); font-weight:500;}
+  .greeting .hi span{color:var(--gold-2); font-style:italic;}
+  .greeting .sub{color:var(--muted); font-size:14.5px; margin-top:6px;}
+
+  /* POSTER (signature, downloadable) */
+  .poster{
+    position:relative; margin:26px auto 0; max-width:620px;
+    background:
+      radial-gradient(700px 320px at 50% -30%, rgba(232,180,104,.14), transparent 70%),
+      linear-gradient(180deg, #0e1538, #0a0f29);
+    border:1px solid var(--line); border-radius:22px; overflow:hidden;
+    padding:40px 30px 30px; text-align:center;
+    box-shadow:0 50px 120px -50px rgba(0,0,0,.95), inset 0 1px 0 rgba(255,255,255,.06);
+  }
+  .poster .orbit{
+    position:absolute; top:-130px; left:50%; width:560px; height:560px;
+    margin-left:-280px; border-radius:50%; pointer-events:none; opacity:.5;
+    background:conic-gradient(from 0deg, transparent 0 80%, rgba(232,180,104,.5) 92%, transparent 100%);
+    -webkit-mask:radial-gradient(circle, transparent 64%, #000 65%, #000 66%, transparent 67%);
+            mask:radial-gradient(circle, transparent 64%, #000 65%, #000 66%, transparent 67%);
+    animation:spin 26s linear infinite;
+  }
+  @keyframes spin{to{transform:rotate(360deg);}}
+  .poster .p-name{position:relative; font-family:var(--mono); font-size:11px; letter-spacing:.3em; text-transform:uppercase; color:var(--gold);}
+  .poster .p-label{position:relative; color:var(--muted); font-size:13px; margin-top:22px; letter-spacing:.05em;}
+  .bignum{
+    position:relative; font-family:var(--mono); font-weight:700;
+    font-variant-numeric:tabular-nums; font-size:clamp(40px,11vw,76px);
+    line-height:1; margin:8px 0 2px; color:var(--cream);
+    text-shadow:0 0 40px rgba(232,180,104,.25); letter-spacing:-.01em;
+  }
+  .bignum .unit{font-size:15px; color:var(--gold-2); letter-spacing:.18em; text-transform:uppercase; display:block; margin-top:12px; font-weight:500;}
+  .tick{animation:tick .9s ease;}
+  @keyframes tick{0%{transform:scale(1.012);}100%{transform:scale(1);}}
+  .p-mini{position:relative; display:flex; justify-content:center; gap:26px; margin-top:26px; flex-wrap:wrap;}
+  .p-mini .m{min-width:90px;}
+  .p-mini .m b{display:block; font-family:var(--mono); font-weight:700; font-variant-numeric:tabular-nums; font-size:19px; color:var(--gold-2);}
+  .p-mini .m span{font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted);}
+  .poster .p-foot{position:relative; margin-top:28px; padding-top:18px; border-top:1px solid var(--line); font-family:var(--mono); font-size:10.5px; letter-spacing:.22em; text-transform:uppercase; color:var(--muted-2);}
+  .poster .p-foot b{color:var(--gold);}
+
+  /* TIME STRIP */
+  .strip{display:grid; grid-template-columns:repeat(6,1fr); gap:1px; margin:30px 0 0; background:var(--line-soft); border:1px solid var(--line-soft); border-radius:14px; overflow:hidden;}
+  .strip .c{background:var(--panel-2); padding:16px 8px; text-align:center;}
+  .strip .c b{display:block; font-family:var(--mono); font-weight:700; font-variant-numeric:tabular-nums; font-size:clamp(15px,3.4vw,21px); color:var(--cream);}
+  .strip .c span{font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-top:4px; display:block;}
+
+  /* SECTION HEADINGS */
+  .sect-head{display:flex; align-items:center; gap:16px; margin:46px 0 22px;}
+  .sect-head h2{font-family:var(--serif); font-weight:500; font-size:clamp(22px,4vw,30px); margin:0; white-space:nowrap;}
+  .sect-head .rule{flex:1; height:1px; background:linear-gradient(90deg, var(--line), transparent);}
+  .sect-head .ix{font-family:var(--mono); font-size:11px; color:var(--gold); letter-spacing:.2em;}
+
+  /* STAT GRID */
+  .grid{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+  .stat{
+    position:relative; background:linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.008));
+    border:1px solid var(--line-soft); border-radius:16px; padding:20px 20px 18px;
+    transition:border-color .25s, transform .25s;
+  }
+  .stat:hover{border-color:var(--line); transform:translateY(-2px);}
+  .stat .ic{width:30px; height:30px; color:var(--gold); margin-bottom:14px; opacity:.95;}
+  .stat .ic svg{width:100%; height:100%; display:block;}
+  .stat .lab{font-family:var(--mono); font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:var(--gold-deep);}
+  .stat .num{font-family:var(--mono); font-weight:700; font-variant-numeric:tabular-nums; font-size:clamp(24px,5vw,32px); line-height:1.05; margin:6px 0 8px; color:var(--cream);}
+  .stat .cap{font-size:13px; color:var(--muted); line-height:1.5;}
+
+  /* WORLDS */
+  .worlds{display:grid; grid-template-columns:repeat(5,1fr); gap:12px;}
+  .world{background:var(--panel-2); border:1px solid var(--line-soft); border-radius:14px; padding:18px 10px; text-align:center;}
+  .world .nm{font-family:var(--mono); font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--gold); margin-bottom:8px;}
+  .world .ag{font-family:var(--mono); font-weight:700; font-variant-numeric:tabular-nums; font-size:clamp(17px,3.6vw,23px); color:var(--cream);}
+  .world .yr{font-size:10px; color:var(--muted); margin-top:3px;}
+
+  /* MILESTONE */
+  .milestone{
+    margin:30px 0 0; border:1px solid var(--line); border-radius:16px; padding:22px 24px;
+    background:linear-gradient(120deg, rgba(232,180,104,.1), rgba(232,180,104,.02));
+    display:flex; gap:18px; align-items:center;
+  }
+  .milestone .mk{font-family:var(--mono); font-size:26px; color:var(--gold);}
+  .milestone .mt b{color:var(--gold-2);}
+  .milestone .mt{font-size:15px; line-height:1.55;}
+
+  /* SHARE */
+  .share-block{text-align:center; margin:54px 0 0;}
+  .share-block h2{font-family:var(--serif); font-weight:500; font-size:clamp(24px,4.6vw,34px); margin:0 0 6px;}
+  .share-block p{color:var(--muted); margin:0 0 22px;}
+  .share-btns{display:flex; flex-wrap:wrap; gap:11px; justify-content:center;}
+  .sbtn{
+    display:inline-flex; align-items:center; gap:9px; cursor:pointer;
+    padding:12px 18px; border-radius:11px; font-family:var(--sans); font-weight:600; font-size:14px;
+    border:1px solid var(--line-soft); background:rgba(255,255,255,.04); color:var(--cream);
+    transition:transform .15s, border-color .2s, background .2s;
+  }
+  .sbtn:hover{transform:translateY(-2px); border-color:var(--line); background:rgba(255,255,255,.07);}
+  .sbtn svg{width:17px; height:17px;}
+  .sbtn.primary{background:linear-gradient(180deg,var(--gold-2),var(--gold-deep)); color:#241803; border:none; box-shadow:0 12px 26px -12px rgba(232,180,104,.6);}
+  .restart{margin-top:24px;}
+  .restart button{background:none; border:none; color:var(--muted); font-family:var(--mono); font-size:12px; letter-spacing:.12em; text-transform:uppercase; cursor:pointer; border-bottom:1px dashed var(--muted-2); padding-bottom:2px;}
+  .restart button:hover{color:var(--gold);}
+  .copied{display:inline-block; margin-left:8px; color:var(--gold); font-size:13px; opacity:0; transition:opacity .3s;}
+  .copied.on{opacity:1;}
+
+  /* ---------------- ADSENSE SLOTS ---------------- */
+  .ad-zone{margin:40px 0; display:flex; flex-direction:column; align-items:center;}
+  .ad-label{font-family:var(--mono); font-size:9.5px; letter-spacing:.26em; text-transform:uppercase; color:var(--muted-2); margin-bottom:8px;}
+  .ad-box{
+    width:100%; max-width:728px; min-height:96px; border-radius:12px;
+    border:1px dashed var(--line-soft);
+    display:flex; align-items:center; justify-content:center;
+    color:var(--muted-2); font-size:12px; background:rgba(255,255,255,.015);
+  }
+  .ad-box ins{width:100%;}
+
+  /* ---------------- FOOTER ---------------- */
+  footer.site{margin:64px 0 40px; text-align:center; color:var(--muted-2); font-size:12.5px;}
+  footer.site .disclaimer{max-width:520px; margin:0 auto 16px; line-height:1.6;}
+  footer.site .fb{font-family:var(--mono); letter-spacing:.22em; text-transform:uppercase; font-size:10.5px; color:var(--muted);}
+  footer.site .fnav{margin:0 0 18px; display:flex; gap:22px; justify-content:center; flex-wrap:wrap;}
+  footer.site .fnav a{color:var(--muted); text-decoration:none; font-size:13px; border-bottom:1px solid transparent; padding-bottom:2px; transition:color .2s, border-color .2s;}
+  footer.site .fnav a:hover{color:var(--gold); border-color:var(--gold);}
+
+  /* ---------------- INFO / CONTENT ---------------- */
+  .info{margin:64px auto 0; max-width:760px;}
+  .info h2{font-family:var(--serif); font-weight:500; font-size:clamp(24px,4.6vw,34px); margin:48px 0 14px; letter-spacing:-.01em;}
+  .info h2:first-child{margin-top:0;}
+  .info p{color:var(--muted); font-size:15.5px; line-height:1.75; margin:0 0 16px;}
+  .info p strong{color:var(--cream); font-weight:600;}
+  .info .sci{display:grid; grid-template-columns:1fr 1fr; gap:1px; margin:22px 0 8px; background:var(--line-soft); border:1px solid var(--line-soft); border-radius:14px; overflow:hidden;}
+  .info .sci .row{background:var(--panel-2); padding:16px 18px;}
+  .info .sci .row b{display:block; font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--gold); margin-bottom:5px;}
+  .info .sci .row span{font-size:13.5px; color:var(--muted); line-height:1.55;}
+  .faq{margin-top:10px;}
+  .faq .q{border-top:1px solid var(--line-soft); padding:18px 0;}
+  .faq .q:last-child{border-bottom:1px solid var(--line-soft);}
+  .faq .q h3{font-family:var(--sans); font-weight:600; font-size:16px; color:var(--cream); margin:0 0 6px;}
+  .faq .q p{margin:0; font-size:14.5px;}
+
+  /* shared-view banner */
+  .shared-note{display:none; align-items:center; justify-content:center; gap:16px; flex-wrap:wrap;
+    margin:36px auto 0; max-width:600px; padding:14px 20px; text-align:center;
+    background:linear-gradient(120deg, rgba(232,180,104,.12), rgba(232,180,104,.03));
+    border:1px solid var(--line); border-radius:14px; font-size:14.5px; color:var(--cream);}
+  .shared-note.show{display:flex;}
+  .shared-note b{color:var(--gold-2);}
+  .shared-note button{cursor:pointer; border:none; white-space:nowrap;
+    padding:11px 18px; border-radius:10px; font-family:var(--sans); font-weight:600; font-size:14px; color:#241803;
+    background:linear-gradient(180deg,var(--gold-2),var(--gold-deep));
+    box-shadow:0 10px 22px -10px rgba(232,180,104,.6); transition:transform .15s, filter .2s;}
+  .shared-note button:hover{transform:translateY(-1px); filter:brightness(1.04);}
+
+  /* ---------------- RESPONSIVE ---------------- */
+  @media (max-width:620px){
+    .field-row{flex-direction:column; gap:0;}
+    .strip{grid-template-columns:repeat(3,1fr);}
+    .grid{grid-template-columns:1fr;}
+    .worlds{grid-template-columns:repeat(3,1fr);}
+    .milestone{flex-direction:column; text-align:center; gap:10px;}
+    .info .sci{grid-template-columns:1fr;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .reveal{animation:none; opacity:1; transform:none;}
+    .orbit{animation:none;}
+    .tick{animation:none;}
+    html{scroll-behavior:auto;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="site">
+    <span class="brand">Your Life in Numbers</span>
+  </header>
+
+  <!-- ===================== HERO + FORM ===================== -->
+  <section class="hero" id="top">
+    <h1>How much have you<br><em>actually</em> lived?</h1>
+    <p class="lede">Enter the moment you arrived on Earth and watch your life unfold in heartbeats, breaths, full moons, and the silent miles you've drifted through space.</p>
+
+    <form class="entry" id="lifeForm" autocomplete="off" novalidate>
+      <div class="eyebrow">Your beginning</div>
+      <div class="field-row">
+        <div class="field">
+          <label for="first">First name</label>
+          <input type="text" id="first" placeholder="Alex" maxlength="40" />
+        </div>
+        <div class="field">
+          <label for="last">Last name</label>
+          <input type="text" id="last" placeholder="Rivera" maxlength="40" />
+        </div>
+      </div>
+      <div class="field full">
+        <label for="dob">Date of birth</label>
+        <input type="date" id="dob" />
+      </div>
+      <div class="field full">
+        <label for="tob">Time of birth</label>
+        <input type="time" id="tob" />
+        <div class="hint">Don't know it? Leave it blank — we'll assume noon.</div>
+      </div>
+      <button type="submit" class="cta">Reveal my life &nbsp;→</button>
+      <div class="err" id="err"></div>
+    </form>
+  </section>
+
+  <!-- ===================== RESULTS ===================== -->
+  <section id="results">
+
+    <!-- Shown only when the page is opened from a shared result link -->
+    <div class="shared-note" id="sharedNote">
+      <span>You're looking at <b id="sharedWho">someone</b>'s life in numbers.</span>
+      <button id="makeOwn" type="button">✦ Reveal your own →</button>
+    </div>
+
+    <div class="greeting reveal">
+      <div class="hi">Hello, <span id="rName">friend</span>.</div>
+      <div class="sub" id="rBorn">You arrived on a beautiful day.</div>
+    </div>
+
+    <!-- POSTER (the shareable centerpiece) -->
+    <div class="poster reveal" id="poster" style="animation-delay:.08s">
+      <div class="orbit"></div>
+      <div class="p-name" id="posterName">— ALEX RIVERA —</div>
+      <div class="p-label">You have been alive for</div>
+      <div class="bignum" id="secAlive">0<span class="unit">seconds</span></div>
+      <div class="p-mini">
+        <div class="m"><b id="pHeart">0</b><span>heartbeats</span></div>
+        <div class="m"><b id="pBreath">0</b><span>breaths</span></div>
+        <div class="m"><b id="pSun">0</b><span>trips ’round the sun</span></div>
+      </div>
+      <div class="p-foot">Your Life in Numbers &nbsp;·&nbsp; <b>see yours →</b></div>
+    </div>
+
+    <!-- ===== ADSENSE SLOT 1 ===== -->
+    <!-- >> data-ad-client = il tuo Publisher ID  ·  data-ad-slot = ID dell'unità annuncio -->
+    <div class="ad-zone reveal" style="animation-delay:.12s">
+      <span class="ad-label">Advertisement</span>
+      <div class="ad-box">
+        <!--
+        <ins class="adsbygoogle" style="display:block"
+             data-ad-client="ca-pub-4872075268096913"
+             data-ad-slot="1111111111"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        -->
+        ad space · 1
+      </div>
+    </div>
+
+    <!-- TIME STRIP -->
+    <div class="strip reveal" style="animation-delay:.16s">
+      <div class="c"><b id="tYears">0</b><span>years</span></div>
+      <div class="c"><b id="tMonths">0</b><span>months</span></div>
+      <div class="c"><b id="tWeeks">0</b><span>weeks</span></div>
+      <div class="c"><b id="tDays">0</b><span>days</span></div>
+      <div class="c"><b id="tHours">0</b><span>hours</span></div>
+      <div class="c"><b id="tMins">0</b><span>minutes</span></div>
+    </div>
+
+    <!-- STAT GRID -->
+    <div class="sect-head reveal" style="animation-delay:.2s">
+      <span class="ix">I.</span>
+      <h2>Your body, keeping count</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="grid reveal" style="animation-delay:.22s" id="bodyGrid"></div>
+
+    <!-- ===== ADSENSE SLOT 2 ===== -->
+    <div class="ad-zone reveal" style="animation-delay:.24s">
+      <span class="ad-label">Advertisement</span>
+      <div class="ad-box">
+        <!--
+        <ins class="adsbygoogle" style="display:block"
+             data-ad-client="ca-pub-4872075268096913"
+             data-ad-slot="2222222222"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        -->
+        ad space · 2
+      </div>
+    </div>
+
+    <div class="sect-head reveal" style="animation-delay:.26s">
+      <span class="ix">II.</span>
+      <h2>Your quiet journey through space</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="grid reveal" style="animation-delay:.28s" id="cosmosGrid"></div>
+
+    <!-- WORLDS -->
+    <div class="sect-head reveal" style="animation-delay:.3s">
+      <span class="ix">III.</span>
+      <h2>Your age on other worlds</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="worlds reveal" style="animation-delay:.32s" id="worlds"></div>
+
+    <!-- MILESTONE -->
+    <div class="milestone reveal" style="animation-delay:.34s">
+      <div class="mk">★</div>
+      <div class="mt" id="milestone">Mark your calendar…</div>
+    </div>
+
+    <!-- SHARE -->
+    <div class="share-block reveal" style="animation-delay:.36s">
+      <h2>Show the world how much you've lived</h2>
+      <p>Post your numbers and let friends discover their own.</p>
+      <div class="share-btns">
+        <button class="sbtn primary" id="shNative">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
+          Share
+        </button>
+        <button class="sbtn" id="shDownload">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download image
+        </button>
+        <a class="sbtn" id="shX" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.66l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          X
+        </a>
+        <a class="sbtn" id="shFb" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.9 3.78-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.9h-2.34V22c4.78-.79 8.43-4.94 8.43-9.94z"/></svg>
+          Facebook
+        </a>
+        <a class="sbtn" id="shWa" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 0 0 1.523 5.218l-.999 3.648zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          WhatsApp
+        </a>
+        <button class="sbtn" id="shCopy">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          Copy link
+        </button>
+        <span class="copied" id="copied">Link copied ✓</span>
+      </div>
+      <div class="restart"><button id="restart">↺ Try another name</button></div>
+    </div>
+
+    <!-- ===== ADSENSE SLOT 3 ===== -->
+    <div class="ad-zone reveal" style="animation-delay:.38s">
+      <span class="ad-label">Advertisement</span>
+      <div class="ad-box">
+        <!--
+        <ins class="adsbygoogle" style="display:block"
+             data-ad-client="ca-pub-4872075268096913"
+             data-ad-slot="3333333333"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        -->
+        ad space · 3
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===================== INFO / CONTENT ===================== -->
+  <section class="info" id="how">
+    <h2>How it works</h2>
+    <p>You give us one thing — the moment you were born — and everything else unfolds from there. The instant you press <strong>Reveal my life</strong>, your browser measures the exact time that has passed since your birth, down to the second, and multiplies it by the steady rhythms of the human body and the motion of the planet beneath you.</p>
+    <p>It all happens <strong>right inside your browser</strong>. Your birth date and time are never sent to a server, never stored, and never shared — the calculation runs on your own device and disappears the moment you close the page.</p>
+
+    <h2>The science behind the numbers</h2>
+    <p>Every figure is built from well-established population averages and astronomical constants. Real people vary — a calm heart beats slower, a restless sleeper dreams more — so treat these as a beautiful approximation rather than a medical measurement.</p>
+    <div class="sci">
+      <div class="row"><b>Heartbeats</b><span>Based on an average resting heart rate of about 72 beats per minute.</span></div>
+      <div class="row"><b>Breaths</b><span>Around 16 breaths per minute for a typical adult at rest.</span></div>
+      <div class="row"><b>Blinks</b><span>Roughly 15 blinks a minute, counted only while you're awake.</span></div>
+      <div class="row"><b>Hours of sleep</b><span>Humans spend close to one third of their lives asleep.</span></div>
+      <div class="row"><b>Steps walked</b><span>An everyday average of about 7,500 steps per day.</span></div>
+      <div class="row"><b>Full moons</b><span>One full moon arrives every 29.53 days — the length of a lunar cycle.</span></div>
+      <div class="row"><b>Trips around the Sun</b><span>Earth completes one orbit a year: one lap for every birthday.</span></div>
+      <div class="row"><b>Distance through space</b><span>Our solar system races around the galaxy at roughly 828,000 km/h, carrying you along for the ride.</span></div>
+    </div>
+
+    <h2>Questions people ask</h2>
+    <div class="faq">
+      <div class="q"><h3>Are these numbers exact?</h3><p>No — and that's part of the fun. They're friendly estimates based on human averages, so your real totals will differ. The goal is wonder and perspective, not precision.</p></div>
+      <div class="q"><h3>Do you store my date of birth?</h3><p>Never. The entire calculation happens in your browser. Nothing you type is uploaded, saved, or sent anywhere.</p></div>
+      <div class="q"><h3>Why do you ask for my time of birth?</h3><p>Only to make your "seconds alive" count a little more precise. It's completely optional — leave it blank and we'll simply assume midday.</p></div>
+      <div class="q"><h3>Can I share my results?</h3><p>Yes. You can post them straight to your favourite social network, or download your result as an image to share anywhere you like.</p></div>
+      <div class="q"><h3>Is this medical or health advice?</h3><p>Not at all. It's a playful way to look at the time you've lived — nothing here should be used for health decisions.</p></div>
+    </div>
+  </section>
+
+  <footer class="site">
+    <nav class="fnav">
+      <a href="index.html">Home</a>
+      <a href="baby-name-generator.html">Baby Names</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p class="disclaimer">Every figure here is a friendly estimate built on human averages — real bodies and real lives vary beautifully. Think of it as poetry with arithmetic, not a medical readout.</p>
+    <p class="fb">Your Life in Numbers · © 2026</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  // ---- average rates (per minute / per day) ----
+  var HEART_BPM   = 72;        // heartbeats per minute
+  var BREATH_PM   = 16;        // breaths per minute
+  var BLINK_PM    = 15;        // blinks per waking minute (~2/3 of life awake)
+  var STEPS_DAY   = 7500;      // steps per day
+  var WORDS_DAY   = 16000;     // words spoken per day
+  var LAUGH_DAY   = 17;        // times laughed per day
+  var SLEEP_FRAC  = 1/3;       // share of life asleep
+  var DREAMS_NGT  = 4;         // dreams per night
+  var BLOOD_LPM   = 5;         // litres of blood pumped per minute
+  var MOON_DAYS   = 29.530589; // days per lunar cycle
+  var GALAXY_KMH  = 828000;    // sun's speed around the galaxy (km/h)
+  var MOON_TRIP   = 768800;    // km, Earth–Moon round trip
+  var BATHTUB_L   = 150;       // litres in a bathtub
+  var YEAR_DAYS   = 365.2425;
+
+  var ZODIAC = [
+    [1,20,"Aquarius"],[2,19,"Pisces"],[3,21,"Aries"],[4,20,"Taurus"],
+    [5,21,"Gemini"],[6,21,"Cancer"],[7,23,"Leo"],[8,23,"Virgo"],
+    [9,23,"Libra"],[10,23,"Scorpio"],[11,22,"Sagittarius"],[12,22,"Capricorn"]
+  ];
+  function zodiac(m,d){
+    for(var i=0;i<ZODIAC.length;i++){ if(m===ZODIAC[i][0] && d<ZODIAC[i][1]) return ZODIAC[(i+11)%12][2]; }
+    return ZODIAC[(m-1)%12][2];
+  }
+
+  // planet orbital periods (Earth days)
+  var WORLDS = [
+    ["Mercury",87.969],["Venus",224.701],["Mars",686.980],
+    ["Jupiter",4332.59],["Saturn",10759.22]
+  ];
+
+  // minimalist line icons
+  var ICONS = {
+    heart:'<path d="M19 5.5c-1.7-1.6-4.4-1.5-6 .2L12 6.7l-1-1c-1.6-1.7-4.3-1.8-6-.2-1.9 1.8-1.9 4.7-.1 6.6L12 20l7.1-7.9c1.8-1.9 1.8-4.8-.1-6.6z"/>',
+    lungs:'<path d="M12 3v8"/><path d="M12 8c0 4-1 7-3.5 8.5C6 18 5 16 5 13c0-2 .5-4 2-5"/><path d="M12 8c0 4 1 7 3.5 8.5C18 18 19 16 19 13c0-2-.5-4-2-5"/>',
+    eye:'<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="2.6"/>',
+    sleep:'<path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8z"/>',
+    dream:'<path d="M7 18a4 4 0 0 1 0-8 5.5 5.5 0 0 1 10.7-1.3A3.8 3.8 0 0 1 17 18z"/>',
+    steps:'<path d="M8 4c1.5 0 2 1.5 2 4s-.5 5-.5 6.5S10 17 8.5 17 6 16 6 13.5 6.5 4 8 4z"/><path d="M16 8c1.3 0 1.8 1.3 1.8 3.4s-.4 4.3-.4 5.6.3 2.5-1 2.5-2.2-.9-2.2-3 .5-8.5 1.8-8.5z"/>',
+    words:'<path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9 9 0 0 1-3.8-.8L3 20.5l1.4-4.2A8.3 8.3 0 0 1 3.5 11.5 8.5 8.5 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z"/>',
+    laugh:'<circle cx="12" cy="12" r="9"/><path d="M8 14a4 4 0 0 0 8 0z"/><line x1="9" y1="9.5" x2="9" y2="9.5"/><line x1="15" y1="9.5" x2="15" y2="9.5"/>',
+    blood:'<path d="M12 3s6 6.5 6 10.5a6 6 0 0 1-12 0C6 9.5 12 3 12 3z"/>',
+    sun:'<circle cx="12" cy="12" r="4.2"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5.6 5.6 4.2 4.2M19.8 19.8l-1.4-1.4M18.4 5.6l1.4-1.4M4.2 19.8l1.4-1.4"/>',
+    moon:'<path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8z"/>',
+    galaxy:'<path d="M12 12c4-3 9-2.5 9-2.5S18 15 12 15 4 13 4 13"/><circle cx="12" cy="12" r="1.4"/><path d="M12 12c-4 3-9 2.5-9 2.5S6 9 12 9s8 2 8 2"/>',
+    rotate:'<path d="M3 12a9 9 0 0 1 15.5-6.3L21 8"/><polyline points="21 3 21 8 16 8"/><path d="M21 12a9 9 0 0 1-15.5 6.3L3 16"/><polyline points="3 21 3 16 8 16"/>'
+  };
+  function icon(name){
+    return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">'+ICONS[name]+'</svg>';
+  }
+
+  // ---- helpers ----
+  function $(id){ return document.getElementById(id); }
+  function fmt(n){ return Math.floor(n).toLocaleString('en-US'); }
+  function fmt1(n){ return n.toLocaleString('en-US',{minimumFractionDigits:1, maximumFractionDigits:1}); }
+  function ordinal(n){
+    var s=["th","st","nd","rd"], v=n%100;
+    return n.toLocaleString('en-US')+(s[(v-20)%10]||s[v]||s[0]);
+  }
+
+  var birth=null, timer=null;
+
+  // build a static card once, returns element
+  function card(iconName, label, id, cap){
+    var el=document.createElement('div');
+    el.className='stat';
+    el.innerHTML='<div class="ic">'+icon(iconName)+'</div>'+
+                 '<div class="lab">'+label+'</div>'+
+                 '<div class="num" id="'+id+'">0</div>'+
+                 '<div class="cap">'+cap+'</div>';
+    return el;
+  }
+
+  function buildGrids(){
+    var body=$('bodyGrid'); body.innerHTML='';
+    body.appendChild(card('heart','Heartbeats','sHeart','Your heart has never once asked for a day off.'));
+    body.appendChild(card('lungs','Breaths taken','sBreath','In, and out, and in again — without a single reminder.'));
+    body.appendChild(card('eye','Times you\'ve blinked','sBlink','Tiny curtains, opening and closing on everything you\'ve seen.'));
+    body.appendChild(card('sleep','Hours asleep','sSleep','Roughly a third of the adventure, spent recharging.'));
+    body.appendChild(card('dream','Dreams dreamt','sDream','Most slipped away by morning, a few you still remember.'));
+    body.appendChild(card('laugh','Times you\'ve laughed','sLaugh','And the very best ones are still ahead of you.'));
+
+    var cos=$('cosmosGrid'); cos.innerHTML='';
+    cos.appendChild(card('steps','Steps walked','sSteps','One foot after another, all the way to today.'));
+    cos.appendChild(card('words','Words spoken','sWords','Stories, secrets, apologies, and the occasional rant.'));
+    cos.appendChild(card('blood','Blood pumped','sBlood','<span id="capBlood"></span>'));
+    cos.appendChild(card('moon','Full moons seen','sMoon','Each one quietly marking another month survived.'));
+    cos.appendChild(card('galaxy','Miles through space','sSpace','<span id="capSpace"></span>'));
+    cos.appendChild(card('rotate','Spins of the Earth','sSpins','One full turn beneath your feet for every day alive.'));
+  }
+
+  function buildWorlds(days){
+    var w=$('worlds'); w.innerHTML='';
+    for(var i=0;i<WORLDS.length;i++){
+      var age=days/WORLDS[i][1];
+      var el=document.createElement('div');
+      el.className='world';
+      el.innerHTML='<div class="nm">'+WORLDS[i][0]+'</div>'+
+                   '<div class="ag">'+fmt1(age)+'</div>'+
+                   '<div class="yr">years old</div>';
+      w.appendChild(el);
+    }
+  }
+
+  function update(){
+    if(!birth) return;
+    var now=new Date();
+    var ms = now - birth;
+    if(ms<0) ms=0;
+
+    var sec   = ms/1000;
+    var mins  = sec/60;
+    var hours = mins/60;
+    var days  = hours/24;
+    var weeks = days/7;
+    var years = days/YEAR_DAYS;
+
+    // poster
+    var secEl=$('secAlive');
+    secEl.firstChild.nodeValue = fmt(sec);
+    secEl.classList.remove('tick'); void secEl.offsetWidth; secEl.classList.add('tick');
+    $('pHeart').textContent  = fmt(mins*HEART_BPM);
+    $('pBreath').textContent = fmt(mins*BREATH_PM);
+    $('pSun').textContent    = fmt(years);
+
+    // time strip
+    $('tYears').textContent  = fmt(years);
+    $('tMonths').textContent = fmt(days/30.436875);
+    $('tWeeks').textContent  = fmt(weeks);
+    $('tDays').textContent   = fmt(days);
+    $('tHours').textContent  = fmt(hours);
+    $('tMins').textContent   = fmt(mins);
+
+    // body grid
+    $('sHeart').textContent  = fmt(mins*HEART_BPM);
+    $('sBreath').textContent = fmt(mins*BREATH_PM);
+    $('sBlink').textContent  = fmt(mins*(2/3)*BLINK_PM);
+    $('sSleep').textContent  = fmt(hours*SLEEP_FRAC);
+    $('sDream').textContent  = fmt(days*DREAMS_NGT);
+    $('sLaugh').textContent  = fmt(days*LAUGH_DAY);
+
+    // cosmos grid
+    $('sSteps').textContent  = fmt(days*STEPS_DAY);
+    $('sWords').textContent  = fmt(days*WORDS_DAY);
+    var litres = mins*BLOOD_LPM;
+    $('sBlood').textContent  = fmt(litres)+' L';
+    var capB=$('capBlood'); if(capB) capB.textContent='Enough to fill about '+fmt(litres/BATHTUB_L)+' bathtubs.';
+    $('sMoon').textContent   = fmt(days/MOON_DAYS);
+    var spaceKm = hours*GALAXY_KMH;
+    var spaceMi = spaceKm*0.621371;
+    $('sSpace').textContent  = fmt(spaceMi);
+    var capS=$('capSpace'); if(capS) capS.textContent='Carried by the spinning galaxy — that\'s '+fmt(spaceKm/MOON_TRIP)+' round trips to the Moon.';
+    $('sSpins').textContent  = fmt(days);
+  }
+
+  function milestoneText(){
+    var now=new Date();
+    var secNow = (now - birth)/1000;
+    var billions = Math.floor(secNow/1e9) + 1;        // next billion-second mark
+    var target = new Date(birth.getTime() + billions*1e9*1000);
+    var when = target.toLocaleDateString('en-US',{weekday:'long', year:'numeric', month:'long', day:'numeric'});
+    return 'Mark your calendar — you\'ll quietly cross your <b>'+ordinal(billions)+' billionth second of life</b> on <b>'+when+'</b>.';
+  }
+
+  // ---- shareable link that carries the person's data ----
+  var shareData=null;  // {f,l,d,t} of the result currently on screen
+  function encodeShare(o){
+    try{ return btoa(unescape(encodeURIComponent(JSON.stringify(o)))); }catch(e){ return ''; }
+  }
+  function decodeShare(token){
+    try{ return JSON.parse(decodeURIComponent(escape(atob(token)))); }catch(e){ return null; }
+  }
+  function shareUrl(){
+    var base = window.location.origin + window.location.pathname;
+    if(shareData){ return base + '?s=' + encodeURIComponent(encodeShare(shareData)); }
+    return base;
+  }
+
+  function shareText(){
+    var name=$('rName').textContent;
+    var beats=$('pHeart').textContent, breaths=$('pBreath').textContent, sun=$('pSun').textContent;
+    return name+' has been alive long enough for '+beats+' heartbeats, '+breaths+' breaths, and '+sun+' trips around the sun. ❤️ How much have YOU lived?';
+  }
+
+  function buildShareLinks(){
+    var url = shareUrl();
+    var txt = shareText();
+    $('shX').href  = 'https://twitter.com/intent/tweet?text='+encodeURIComponent(txt)+'&url='+encodeURIComponent(url);
+    $('shFb').href = 'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(url);
+    $('shWa').href = 'https://wa.me/?text='+encodeURIComponent(txt+' '+url);
+  }
+
+  // helper: rebuild the greeting line safely (name via textContent → no injection)
+  function setGreeting(prefix, name, suffix){
+    var hi=document.querySelector('.greeting .hi');
+    if(!hi) return;
+    hi.textContent='';
+    hi.appendChild(document.createTextNode(prefix));
+    var sp=document.createElement('span'); sp.id='rName';
+    if(prefix.indexOf('Hello')!==0){ sp.style.color='var(--gold-2)'; sp.style.fontStyle='italic'; }
+    sp.textContent=name; hi.appendChild(sp);
+    hi.appendChild(document.createTextNode(suffix));
+  }
+
+  // ---- core: compute & show the result from the input fields ----
+  function runReveal(data){
+    var err=$('err'); err.textContent='';
+
+    // data provided = rebuilding a shared result (don't touch the form);
+    // otherwise read what the visitor typed into the form.
+    var first, last, dob, rawTob;
+    if(data){
+      first=(data.f||'').trim(); last=(data.l||'').trim();
+      dob=data.d||''; rawTob=data.t||'';
+    } else {
+      first=$('first').value.trim(); last=$('last').value.trim();
+      dob=$('dob').value; rawTob=$('tob').value;
+    }
+    var tob = rawTob || '12:00';
+
+    if(!dob){ err.textContent='Please add your date of birth to begin.'; return false; }
+
+    var parts=dob.split('-');
+    var tparts=tob.split(':');
+    birth=new Date(+parts[0], (+parts[1])-1, +parts[2], +tparts[0]||0, +tparts[1]||0, 0);
+
+    if(isNaN(birth.getTime())){ err.textContent='That date doesn\'t look quite right — give it another try.'; return false; }
+    if(birth > new Date()){ err.textContent='That\'s in the future! Please enter a date that has already happened.'; return false; }
+    if((+parts[0]) < 1900){ err.textContent='Please enter a year from 1900 onwards.'; return false; }
+
+    var fullName = (first+' '+last).trim();
+    if(!fullName) fullName='Friend';
+
+    // remember the data so the Share buttons can rebuild this exact result in a link
+    shareData = {f:first, l:last, d:dob, t:rawTob};
+
+    setGreeting('Hello, ', first || 'friend', '.');
+    $('posterName').textContent = '— '+(fullName.toUpperCase())+' —';
+
+    var born = birth.toLocaleDateString('en-US',{weekday:'long', year:'numeric', month:'long', day:'numeric'});
+    var sign = zodiac(+parts[1], +parts[2]);
+    $('rBorn').textContent = 'Born on a '+birth.toLocaleDateString('en-US',{weekday:'long'})+', '+born+'  ·  a '+sign+'.';
+
+    var totalDays = (new Date() - birth)/86400000;
+
+    buildGrids();
+    buildWorlds(totalDays);
+    $('milestone').innerHTML = milestoneText();
+    update();
+    buildShareLinks();
+
+    var r=$('results'); r.classList.add('show');
+    if(timer) clearInterval(timer);
+    timer=setInterval(update, 1000);
+    return true;
+  }
+
+  // ---- submit ----
+  $('lifeForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    $('sharedNote').classList.remove('show');   // this is the viewer's own run
+    if(runReveal()){
+      var r=$('results');
+      setTimeout(function(){ r.scrollIntoView({behavior:'smooth', block:'start'}); }, 80);
+    }
+  });
+
+  // ---- start over (used by 'Try another name' and 'Reveal your own') ----
+  function startOver(){
+    if(timer){ clearInterval(timer); timer=null; }
+    shareData=null;
+    $('sharedNote').classList.remove('show');
+    $('results').classList.remove('show');
+    $('lifeForm').reset();
+    $('err').textContent='';
+    // strip the ?s= param so a refresh shows the form, not the shared result
+    try{ history.replaceState(null, '', window.location.origin + window.location.pathname); }catch(e){}
+    window.scrollTo({top:0, behavior:'smooth'});
+    setTimeout(function(){ var f=$('first'); if(f) f.focus(); }, 350);
+  }
+  $('restart').addEventListener('click', startOver);
+  $('makeOwn').addEventListener('click', startOver);
+
+  // ---- share actions ----
+  $('shNative').addEventListener('click', function(){
+    var url = shareUrl();
+    if(navigator.share){
+      navigator.share({title:'Your Life in Numbers', text:shareText(), url:url}).catch(function(){});
+    } else {
+      navigator.clipboard.writeText(shareText()+' '+url).then(flashCopied);
+    }
+  });
+
+  function flashCopied(){
+    var c=$('copied'); c.classList.add('on');
+    setTimeout(function(){ c.classList.remove('on'); }, 2200);
+  }
+  $('shCopy').addEventListener('click', function(){
+    var url = shareUrl();
+    navigator.clipboard.writeText(url).then(flashCopied).catch(function(){
+      var t=document.createElement('textarea'); t.value=url; document.body.appendChild(t); t.select();
+      try{ document.execCommand('copy'); flashCopied(); }catch(e){} document.body.removeChild(t);
+    });
+  });
+
+  // ---- lazily load the image library only when needed ----
+  function ensureH2C(cb){
+    if(typeof window.html2canvas!=='undefined'){ cb(); return; }
+    var s=document.createElement('script');
+    s.src='https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js';
+    s.onload=function(){ cb(); };
+    s.onerror=function(){ cb(new Error('blocked')); };
+    document.head.appendChild(s);
+  }
+
+  // ---- download poster as image ----
+  $('shDownload').addEventListener('click', function(){
+    var node=$('poster');
+    var btn=$('shDownload'); var old=btn.innerHTML;
+    btn.style.pointerEvents='none';
+    btn.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4 12H2M22 12h-2"/></svg> Rendering…';
+    function reset(){ btn.innerHTML=old; btn.style.pointerEvents=''; }
+    ensureH2C(function(err){
+      if(err || typeof window.html2canvas==='undefined'){
+        btn.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg> Try the share button';
+        setTimeout(reset, 2600);
+        return;
+      }
+      window.html2canvas(node, {backgroundColor:'#0a0f29', scale:2, useCORS:true}).then(function(canvas){
+        var link=document.createElement('a');
+        link.download='my-life-in-numbers.png';
+        link.href=canvas.toDataURL('image/png');
+        link.click();
+        reset();
+      }).catch(reset);
+    });
+  });
+
+  // ---- if opened from a shared link, rebuild that person's result ----
+  (function loadFromShare(){
+    var params = new URLSearchParams(window.location.search);
+    var token = params.get('s');
+    if(!token) return;
+    var d = decodeShare(token);
+    if(!d || !d.d) return;
+    // NOTE: we deliberately do NOT fill the form fields — the visitor's form
+    // stays empty so they can enter their own details. We rebuild the result
+    // straight from the link data instead.
+    if(runReveal(d)){
+      var who = (d.f && d.f.trim()) ? d.f.trim() : 'Someone';
+      setGreeting('This is ', who, "'s life in numbers.");
+      $('sharedWho').textContent = who;
+      $('sharedNote').classList.add('show');
+      var r=$('results');
+      setTimeout(function(){ r.scrollIntoView({behavior:'smooth', block:'start'}); }, 120);
+    }
+  })();
+
+})();
+</script>
+</body>
+</html>
