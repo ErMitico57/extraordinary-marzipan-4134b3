@@ -1,2 +1,2 @@
 Concept: tip calculator split bill
-Description: A tip calculator that also splits the total bill among friends, showing each person's share including tax and tip. The UI uses a sleek dark background with subtle starfield animation, allowing users to input the total amount, tip percentage, tax, and number of people. The result displays per‑person cost and a friendly "You owe" message with a tiny constellation icon representing their share.
+Description: A clean interface for entering the bill amount, tip %, and number of people; it instantly shows tip total, total amount, and per‑person share, with options to round to the nearest currency unit.

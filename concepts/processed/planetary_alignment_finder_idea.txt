@@ -1,2 +1,2 @@
 Concept: planetary alignment finder
-Description: A visualization tool that maps the positions of the planets in real time and highlights when any two or more planets are in alignment. The interface displays a 2D ecliptic chart with planet icons moving along their orbits, and a list of upcoming alignments with dates. Users can subscribe to receive notifications for notable alignments (e.g., conjunctions) that match the celestial theme of the site.
+Description: A web tool where users pick a date and see which planets are in alignment (within a configurable angle), displayed on a simple solar system diagram with labels.

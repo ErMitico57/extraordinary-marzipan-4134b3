@@ -1,0 +1,2 @@
+Concept: daily horoscope generator widget
+Description: A widget that displays the daily horoscope for the user's zodiac sign in a celestial‑almanac style panel, with a button to generate a custom PNG horoscope to share.

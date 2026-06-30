@@ -1,3 +1,0 @@
-Concept: daily horoscope generator widget
-Description: A micro‑experience inspired by the search query "daily horoscope generator widget".
-Provide a simple interactive tool (HTML/JS) that lets users explore this idea.

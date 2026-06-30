@@ -1,3 +1,0 @@
-Concept: tip calculator split bill
-Description: A micro‑experience inspired by the search query "tip calculator split bill".
-Provide a simple interactive tool (HTML/JS) that lets users explore this idea.

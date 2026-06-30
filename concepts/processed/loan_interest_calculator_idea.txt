@@ -1,2 +1,2 @@
 Concept: loan interest calculator
-Description: A precise loan calculator that computes monthly repayments, total interest, and amortization schedule for personal, auto, or mortgage loans. Input fields include loan amount, annual interest rate, and term (years or months). The output shows the monthly payment, total interest paid, and a downloadable amortization table. The design uses a deep‑space background with subtle orbital motion, reinforcing the site’s celestial theme.
+Description: A tool where users enter loan amount, interest rate, and term to see monthly payment, total interest paid, and an amortization schedule, with optional charts.

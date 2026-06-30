@@ -1,2 +1,2 @@
 Concept: daily horoscope generator widget
-Description: A daily horoscope widget that combines zodiac forecasts with the celestial almanac aesthetic. Using an API that returns horoscope data for all 12 signs, the widget displays a stylized constellation-themed panel showing the user's sign, today's planetary positions, and a concise prediction. It can be embedded on any page and offers a 'Generate Your Personal Horoscope' button that creates a custom PNG with the user's sign symbol and a horoscope excerpt.
+Description: A widget that displays the daily horoscope for the user's zodiac sign in a celestial-almanac style panel, with a button to generate a custom PNG horoscope to share.

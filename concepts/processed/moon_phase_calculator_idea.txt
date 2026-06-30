@@ -1,2 +1,2 @@
 Concept: moon phase calculator
-Description: A lightweight widget that displays the current lunar phase and provides a calendar of upcoming phases (new moon, first quarter, full moon, last quarter). Users can enter their birth date to see the moon phase on that day, linking it to personal astrology. The UI uses a dark, constellation‑styled backdrop with subtle glow effects, reinforcing the celestial theme.
+Description: An interactive tool that displays the current moon phase and lets users select any date to see the corresponding lunar phase, with a visual moon illustration and phase percentage.
