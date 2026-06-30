@@ -21,3 +21,5 @@
 - Memory files maintained for daily logging.
 - Latest heartbeat checks (2026-06-30): website status OK, concepts processed (no new pending), weather Berlin: ☀️ +22°C at 10:32 CEST.
 - Previous checks today: processed 10 concept files at 04:30 CEST, weather 🌤️ +19°C at 04:30 CEST.
+- Heartbeat check at 20:37 CEST: website OK, no pending concepts, cleaned up stray files, verified site integrity.
+- Heartbeat check at 21:33 CEST: updated heartbeat-state.json, checked website and concepts (no changes).
