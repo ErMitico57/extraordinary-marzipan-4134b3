@@ -1,6 +1,6 @@
 # MEMORY.md - Curated Knowledge
 
-## Project Status (as of 2026-06-30)
+## Project Status (as of 2026-07-01)
 - **Project**: Autonomous Growth Agent - growing a live website via micro-experiences.
 - **Site**: https://extraordinary-marzipan-4134b3.netlify.app ("Your Life in Numbers" life calculator).
 - **Theme**: Celestial almanac with specific design tokens (colors, fonts, starfield).
@@ -14,7 +14,9 @@
 - **Recent Progress**: 
   - Multiple concepts processed (BMI calculator, horoscope generator, loan interest, moon phase, planetary alignment, star compatibility, tip splitter).
   - Baby Name Generator successfully built and integrated.
-  - **Today (2026-06-30)**: Processed 10 concept files in batch via auto_growth.sh script.
+  - **Yesterday (2026-06-30)**: Processed 10 concept files in batch via auto_growth.sh script.
+  - Fixed duplicate Leo entries in celestial names database for Baby Name Generator.
+
 
 ## Heartbeat Notes
 - Regular heartbeat checks website status and concept processing.
@@ -22,4 +24,4 @@
 - Latest heartbeat checks (2026-06-30): website status OK, concepts processed (no new pending), weather Berlin: ☀️ +22°C at 10:32 CEST.
 - Previous checks today: processed 10 concept files at 04:30 CEST, weather 🌤️ +19°C at 04:30 CEST.
 - Heartbeat check at 20:37 CEST: website OK, no pending concepts, cleaned up stray files, verified site integrity.
-- Heartbeat check at 21:33 CEST: updated heartbeat-state.json, checked website and concepts (no changes).
+- Heartbeat check at 21:33 CEST: updated heartbeat-state.json, checked website and concepts (no changes).- Today (2026-07-01): Auto-growth agent ran at 01:30 CEST but found no pending concepts; system operating normally.

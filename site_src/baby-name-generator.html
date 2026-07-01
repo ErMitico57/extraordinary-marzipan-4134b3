@@ -555,11 +555,8 @@
     {name: "Nova", gender: "girl", origin: "Astronomical event", meaning: "Star that suddenly increases in brightness due to explosive activity"},
     {name: "Phoenix", gender: "boy", origin: "Constellation/Myth", meaning: "Mythical bird that cyclically regenerates from its own ashes"},
     {name: "Luna", gender: "girl", origin: "Celestial body", meaning: "Roman goddess of the moon"},
-    {name: "Leo", gender: "boy", origin: "Constellation", meaning: "Lion constellation; represents strength and courage"},
     {name: "Stella", gender: "girl", origin: "Latin", meaning: "Star"},
     {name: "Hunter", gender: "boy", origin: "English", meaning: "One who hunts; Orion was known as the hunter"},
-    {name: "Aurora", gender: "girl", origin: "Mythology", meaning: "Goddess of dawn; brings light and new beginnings"},
-    {name: "Leo", gender: "boy", origin: "Constellation", meaning: "Lion; represents leadership and courage"},
     {name: "Astra", gender: "girl", origin: "Greek", meaning: "Star"},
     {name: "Comet", gender: "boy", origin: "Astronomical object", meaning: "Icy body that releases gas and dust, forming a visible atmosphere"},
     {name: "Estelle", gender: "girl", origin: "French/Latin", meaning: "Star"},
@@ -710,8 +707,6 @@
   });
 
   $('#generateMore').addEventListener('click', function() {
-    if (!window.generatedNames) return;
-    
     const gender = $('#gender').value;
     const length = $('#nameLength').value;
     const count = $('#count').value;
