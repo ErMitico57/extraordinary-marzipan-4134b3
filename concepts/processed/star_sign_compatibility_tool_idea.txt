@@ -1,2 +1,2 @@
 Concept: star sign compatibility tool
-Description: A tool that lets users pick two zodiac signs and returns a compatibility percentage with a short explanation of their elemental and modal affinities, presented in a star‑chart style layout.
+Description: A tool that compares two zodiac signs and gives a compatibility percentage with a brief explanation.

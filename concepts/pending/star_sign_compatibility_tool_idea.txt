@@ -1,2 +1,0 @@
-Concept: star sign compatibility tool
-Description: A tool that compares two zodiac signs and gives a compatibility percentage with a brief explanation.
