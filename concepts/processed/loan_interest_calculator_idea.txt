@@ -1,2 +1,2 @@
 Concept: loan interest calculator
-Description: A tool where users enter loan amount, interest rate, and term to see monthly payment, total interest paid, and an amortization schedule, with optional charts.
+Description: A tool that calculates monthly payments and total interest for a loan given loan amount, interest rate, and term.
