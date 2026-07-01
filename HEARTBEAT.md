@@ -6,16 +6,8 @@ read_when:
 
 # HEARTBEAT.md
 
-# Keep this file empty (or with only comments) to skip heartbeat API calls.
-
-# Add tasks below when you want the agent to check something periodically.
-
-## Routine Checks (every heartbeat)
-- Website: Check if extraordinary-marzipan-4134b3.netlify.app is accessible
-- Concepts: Check for new concept files in /concepts/pending/
-- Weather: Check Berlin weather via wttr.in
-- Email/Calendar: Not configured (skip)
-
-## Less frequent checks (can add timestamps or frequency notes)
-- Memory review: Every 24h - review memory files and update MEMORY.md if in main session
-- Project status: Check on baby-name-generator progress
+Last checked: 2026-07-01 13:00 GMT+2
+- Website: extraordinary-marzipan-4134b3.netlify.app - OK
+- Concepts: pending directory has 9 files
+- Weather: Berlin 🌦️+21°C
+- Memory: Skipped (not main session)

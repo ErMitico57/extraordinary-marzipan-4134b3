@@ -1,2 +1,2 @@
 Concept: best free online calculator tools 2024
-Description: A unified, customizable calculator dashboard that combines finance, health, fitness, and scientific calculators into a single web app. The interface uses the site’s celestial almanac dark theme with constellation‑inspired icons, allowing users to switch between calculator types via a radial menu. Each calculator retains full functionality (e.g., mortgage amortization, BMI, unit conversion) while sharing a consistent look and feel.
+Description: A dashboard offering quick access to multiple free calculators (math, finance, health, etc.) with a clean UI, letting users pick the tool they need.
