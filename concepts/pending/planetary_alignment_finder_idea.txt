@@ -1,0 +1,2 @@
+Concept: planetary alignment finder
+Description: A tool that shows when planets will be aligned (e.g., conjunctions) visible from a given location, with dates and a sky map.

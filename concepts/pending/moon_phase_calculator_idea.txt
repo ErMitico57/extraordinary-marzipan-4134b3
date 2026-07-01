@@ -1,0 +1,2 @@
+Concept: moon phase calculator
+Description: A tool that calculates the moon phase for a given date (e.g., birthdate) and displays the phase name and an illustration of the moon.
