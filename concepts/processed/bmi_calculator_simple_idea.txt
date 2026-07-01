@@ -1,2 +1,2 @@
 Concept: BMI calculator simple
-Description: A simple BMI calculator where users enter weight and height (metric or imperial) to get the BMI value and a color‑coded category (underweight, normal, overweight, obese).
+Description: A simple calculator that computes Body Mass Index (BMI) from weight and height, with metric and imperial units support.
