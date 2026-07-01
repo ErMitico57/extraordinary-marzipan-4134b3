@@ -66,7 +66,6 @@ log "Generated page: $DEST_FILE"
 # Git add, commit, push
 cd "$GIT_REPO"
 git commit -am "Add micro‑experience: $TITLE"
-git commit -m "Add micro‑experience: $TITLE"
 git push origin main:master
 log "Pushed new page to GitHub"
 
