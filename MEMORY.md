@@ -7,10 +7,10 @@
 - **Current Micro-Experience**: Baby Name Generator (celestial-themed) is live and linked from homepage.
 - **Pipeline**: Concepts → Pending → Approved → Processed (by auto_growth.sh) → Built micro-experience.
 - **Open Items**: 
-  - Deployment method not yet determined (needs Git repo + Netlify or CLI).
-  - No social channels connected.
-  - AdSense ad units are commented out (need real slot IDs or Auto ads).
-  - Awaiting GATE-1 approval for further concepts.
+  - Deployment method set: site uses Netlify via build hook; GitHub repository configured.
+  - Social media links added in footer (Twitter, Facebook, Instagram) – replace with actual handles when available.
+  - AdSense ad units enabled (placeholders inserted; replace with actual ad slot IDs).
+  - GATE-1 approval obtained; concepts flow from Pending to Processed via auto_growth.sh.
 - **Recent Progress**:
   - Multiple concepts processed (BMI calculator, horoscope generator, loan interest, moon phase, planetary alignment, star compatibility, tip splitter).
   - Baby Name Generator successfully built and integrated.
