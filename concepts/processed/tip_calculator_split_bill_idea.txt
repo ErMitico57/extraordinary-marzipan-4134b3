@@ -1,2 +1,2 @@
 Concept: tip calculator split bill
-Description: A clean interface for entering the bill amount, tip %, and number of people; it instantly shows tip total, total amount, and per‑person share, with options to round to the nearest currency unit.
+Description: A simple tool that takes a bill amount, tip percentage, and number of people, then calculates the tip per person and total per person.
