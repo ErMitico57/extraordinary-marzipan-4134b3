@@ -1,2 +1,0 @@
-Concept: loan interest calculator
-Description: A celestial-themed loan interest calculator that visualizes loan repayment as an orbital journey, showing interest as orbital decay and helping users find optimal payment trajectories.
