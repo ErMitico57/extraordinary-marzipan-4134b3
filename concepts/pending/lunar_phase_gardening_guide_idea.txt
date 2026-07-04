@@ -1,0 +1,2 @@
+Concept: lunar phase gardening guide
+Description: An interactive lunar gardening planner that shows which crops to plant, prune, or harvest based on the current moon phase, featuring a celestial almanac design with moon phase visuals.

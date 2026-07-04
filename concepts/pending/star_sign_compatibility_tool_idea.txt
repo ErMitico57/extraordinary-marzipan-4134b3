@@ -1,0 +1,2 @@
+Concept: star sign compatibility tool
+Description: A celestial-themed zodiac compatibility explorer that compares two birth dates to reveal relationship harmony, with constellation visuals and elemental affinity graphics.

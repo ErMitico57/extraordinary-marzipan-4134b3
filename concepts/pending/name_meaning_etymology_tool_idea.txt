@@ -1,0 +1,2 @@
+Concept: name meaning etymology tool
+Description: A celestial-themed name etymology explorer where users discover the stellar origins and mythological stories behind names, presented with star map visuals and zodiac connections.

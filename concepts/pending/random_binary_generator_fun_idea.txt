@@ -1,0 +1,2 @@
+Concept: random binary generator fun
+Description: A celestial-themed binary toy where users generate random streams of 1s and 0s that twinkle like stars, with options to decode them into ASCII messages or star patterns.

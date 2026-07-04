@@ -1,0 +1,2 @@
+Concept: interactive astronomy quiz ideas
+Description: A celestial-themed interactive quiz platform where users test their astronomy knowledge with starry visuals, zodiac themes, and planetary facts, earning constellation badges for correct answers.
