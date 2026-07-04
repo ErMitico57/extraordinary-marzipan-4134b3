@@ -1,2 +1,2 @@
 Concept: random name generator for babies
-Description: A fun tool that generates random baby names based on user preferences (gender, origin, meaning) with a celestial twist (e.g., star-inspired names).
+Description: A celestial-themed baby name generator that suggests names inspired by stars, constellations, and mythological figures, with meanings and zodiac associations.
