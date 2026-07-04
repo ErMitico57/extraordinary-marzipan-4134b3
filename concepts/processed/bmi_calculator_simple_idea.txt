@@ -1,2 +1,2 @@
 Concept: BMI calculator simple
-Description: A simple calculator that computes Body Mass Index (BMI) from weight and height, with metric and imperial units support.
+Description: A celestial-themed BMI calculator that presents your body mass index as a planetary health score, comparing your results to planetary gravities and offering wellness tips under a starry sky.
