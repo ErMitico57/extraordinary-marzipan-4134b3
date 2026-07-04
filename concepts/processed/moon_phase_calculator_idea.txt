@@ -1,2 +1,2 @@
 Concept: moon phase calculator
-Description: A tool that calculates the moon phase for a given date (e.g., birthdate) and displays the phase name and an illustration of the moon.
+Description: A celestial almanac moon phase calculator that shows the current moon phase, illumination, and rise/set times, with a beautiful starfield background and ability to view past/future dates.
