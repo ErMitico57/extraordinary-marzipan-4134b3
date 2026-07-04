@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>lunar phase gardening guide</title>
+<meta name="description" content="An interactive lunar gardening planner that shows which crops to plant, prune, or harvest based on the current moon phase, featuring a celestial almanac design with moon phase visuals." />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div id="ads-container"></div>
+<div class="content" style="max-width:800px;margin:2rem auto;padding:1rem;">
+<h1>lunar phase gardening guide</h1>
+<p>An interactive lunar gardening planner that shows which crops to plant, prune, or harvest based on the current moon phase, featuring a celestial almanac design with moon phase visuals.</p>
+</div>
+<script>
+  fetch('/_ads.html')
+    .then(r => r.text())
+    .then(html => { document.getElementById('ads-container').innerHTML = html; });
+</script>
+</body>
+</html>
