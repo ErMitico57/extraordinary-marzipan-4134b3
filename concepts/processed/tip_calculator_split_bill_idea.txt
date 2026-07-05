@@ -1,2 +1,2 @@
 Concept: tip calculator split bill
-Description: A simple tool that takes a bill amount, tip percentage, and number of people, then calculates the tip per person and total per person.
+Description: A celestial-themed tip and bill splitter that helps groups calculate tips and split costs under a starry night theme, with options to round to lucky numbers or constellations.
