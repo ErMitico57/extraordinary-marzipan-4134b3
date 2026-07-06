@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A planetary alignment finder that calculates upcoming conjunctions, oppositions, and other celestial alignments, displaying them on an interactive calendar with sky maps and viewing tips.</title>
+<meta name="description" content="A planetary alignment finder that calculates upcoming conjunctions, oppositions, and other celestial alignments, displaying them on an interactive calendar with sky maps and viewing tips." />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div id="ads-container"></div>
+<div class="content" style="max-width:800px;margin:2rem auto;padding:1rem;">
+<h1>A planetary alignment finder that calculates upcoming conjunctions, oppositions, and other celestial alignments, displaying them on an interactive calendar with sky maps and viewing tips.</h1>
+<p>A planetary alignment finder that calculates upcoming conjunctions, oppositions, and other celestial alignments, displaying them on an interactive calendar with sky maps and viewing tips.</p>
+</div>
+<script>
+  fetch('/_ads.html')
+    .then(r => r.text())
+    .then(html => { document.getElementById('ads-container').innerHTML = html; });
+</script>
+</body>
+</html>
