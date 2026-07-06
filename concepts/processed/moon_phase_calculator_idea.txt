@@ -1,2 +1,1 @@
-Concept: moon phase calculator
-Description: A celestial almanac moon phase calculator that shows the current moon phase, illumination, and rise/set times, with a beautiful starfield background and ability to view past/future dates.
+An interactive moon phase calculator that displays the current lunar phase, upcoming phases, and allows users to explore historical or future moon phases with a visual sky map and cultural notes.
