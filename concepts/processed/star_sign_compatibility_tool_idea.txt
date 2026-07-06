@@ -1,2 +1,1 @@
-Concept: star sign compatibility tool
-Description: A celestial-themed zodiac compatibility explorer that compares two birth dates to reveal relationship harmony, with constellation visuals and elemental affinity graphics.
+A star sign compatibility tool that analyzes zodiac sign pairings, providing love, friendship, and work compatibility scores based on elemental balance, planetary rulers, and astrological aspects.
