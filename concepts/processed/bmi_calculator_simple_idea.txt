@@ -1,2 +1,1 @@
-Concept: BMI calculator simple
-Description: A celestial-themed BMI calculator that presents your body mass index as a planetary health score, comparing your results to planetary gravities and offering wellness tips under a starry sky.
+A simple BMI calculator that calculates body mass index and offers a fun celestial health score, comparing your BMI to the phases of the moon or planetary symbols.
