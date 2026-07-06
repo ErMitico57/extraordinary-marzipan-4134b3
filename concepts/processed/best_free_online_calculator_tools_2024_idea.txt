@@ -1,2 +1,1 @@
-Concept: best free online calculator tools 2024
-Description: A celestial-themed calculator suite offering various calculators (finance, health, math) with a starry almanac aesthetic, allowing users to calculate life metrics under a starry sky.
+A celestial finance calculator that computes planetary influence on personal finances, blending astrological insights with real-world interest rates, loan terms, and investment growth projections, all under a starry theme.
