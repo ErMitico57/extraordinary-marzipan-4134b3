@@ -9,4 +9,4 @@
 - [x] Weather checked
 - [ ] Email/Calendar (if configured)
 - [x] Git status checked
-- [ ] Logged to memory file
+- [x] Logged to memory file
