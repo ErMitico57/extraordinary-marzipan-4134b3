@@ -1,2 +1,1 @@
-Concept: tip calculator split bill
-Description: A celestial-themed tip and bill splitter that helps groups calculate tips and split costs under a starry night theme, with options to round to lucky numbers or constellations.
+A tip and bill splitter calculator that helps divide restaurant checks evenly or by item, featuring a celestial theme with constellations representing each diner's share.
