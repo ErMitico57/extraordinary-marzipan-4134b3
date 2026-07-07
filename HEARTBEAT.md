@@ -1,9 +1,4 @@
-# Astrofoto Heartbeat Log
-
-Last updated: Tue 07 Jul 2026 15:30 CEST
-
-## This Heartbeat Cycle (Cron-triggered)
-
+[Tue 2026-07-07 15:30 CEST] Heartbeat poll (cron-event):
 - SOUL.md read
 - USER.md read
 - memory/2026-07-07.md read
