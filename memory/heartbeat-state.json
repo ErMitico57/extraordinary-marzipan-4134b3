@@ -1,7 +1,12 @@
 {
   "lastChecks": {
-    "email": null,
-    "calendar": null,
-    "weather": 1783438343
-  }
+    "email": 1783443733,
+    "calendar": 1783443733,
+    "weather": 1783443733,
+    "concepts": 1783443733,
+    "website": 1783443733,
+    "main_site": 1783443733,
+    "conversations": 1783443733
+  },
+  "lastHeartbeat": 1783443733
 }
