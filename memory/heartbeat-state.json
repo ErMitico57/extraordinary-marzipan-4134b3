@@ -1,13 +1,7 @@
 {
   "lastChecks": {
-    "email": 1783432987,
-    "calendar": 1783432987,
-    "concepts": 1783436559,
-    "weather": 1783436559,
-    "website": 1783436559,
-    "main_site": 1783436559,
-    "git": 1783436559,
-    "conversations": 1783436559
-  },
-  "lastHeartbeat": 1783436559
+    "email": null,
+    "calendar": null,
+    "weather": 1783438343
+  }
 }
