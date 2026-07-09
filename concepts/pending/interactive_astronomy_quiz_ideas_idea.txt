@@ -1,0 +1,2 @@
+Concept: interactive astronomy quiz ideas
+Description: An interactive web-based astronomy quiz featuring multiple-choice questions about planets, stars, constellations, and space exploration, with instant feedback, score tracking, and a beautiful starfield background.

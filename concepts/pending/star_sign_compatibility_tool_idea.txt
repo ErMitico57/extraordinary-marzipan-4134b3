@@ -1,0 +1,2 @@
+Concept: star sign compatibility tool
+Description: A zodiac compatibility checker that compares two signs and provides insights into relationship dynamics, presented with celestial artwork, elemental symbols, and a starry background for an engaging experience.
