@@ -1,1 +1,2 @@
-A loan interest calculator that computes monthly payments and total interest, featuring a space-age theme where interest rates are visualized as orbital trajectories.
+Concept: loan interest calculator
+Description: A celestial-themed loan interest calculator that visualizes interest rates as orbital velocities and loan terms as orbital periods. Users input loan amount, interest rate, and term to calculate monthly payments and total interest, presented with engaging animations of planets orbiting a central star.
