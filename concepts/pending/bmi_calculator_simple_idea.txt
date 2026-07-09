@@ -1,2 +1,0 @@
-Concept: BMI calculator simple
-Description: A simple Body Mass Index (BMI) calculator with a celestial twist, where users input height and weight to see their BMI and health category, presented on a starry background with planets representing different BMI ranges.
