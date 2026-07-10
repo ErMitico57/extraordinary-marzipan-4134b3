@@ -1,0 +1,1 @@
+An interactive daily horoscope generator that provides personalized astrological predictions based on the user's zodiac sign, offering insights into love, career, health, and daily guidance with a celestial-themed interface.
