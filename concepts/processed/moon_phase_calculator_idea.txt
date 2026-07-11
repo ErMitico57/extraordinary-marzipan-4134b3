@@ -1,2 +1,2 @@
 Concept: moon phase calculator
-Description: An interactive tool that calculates the current moon phase for any given date, displaying a realistic moon illustration, illumination percentage, rise/set times, and next phase, set against a night sky background.
+Description: An interactive tool that calculates the current moon phase, moon age, and provides a lunar calendar, allowing users to find the moon phase for any given date.
