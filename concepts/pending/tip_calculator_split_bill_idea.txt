@@ -1,0 +1,2 @@
+Concept: tip calculator split bill
+Description: A simple web tool that calculates tip amounts and splits the total bill among any number of people, with options for different tip percentages and tax.
