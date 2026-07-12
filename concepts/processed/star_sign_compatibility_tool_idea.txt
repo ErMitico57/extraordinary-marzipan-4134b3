@@ -1,2 +1,2 @@
 Concept: star sign compatibility tool
-Description: An online tool that calculates astrological compatibility between two zodiac signs based on birth dates, providing insights into relationship dynamics.
+Description: An interactive compatibility analyzer that compares two zodiac signs to provide insights on love, friendship, and communication dynamics. Features a celestial wheel visualization and personalized advice based on elemental affinities within the almanac theme.
