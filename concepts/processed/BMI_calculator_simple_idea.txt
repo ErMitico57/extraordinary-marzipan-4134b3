@@ -1,0 +1,2 @@
+Concept: BMI calculator simple
+Description: A straightforward Body Mass Index calculator that takes weight and height inputs, computes BMI, and categorizes the result according to health guidelines.
