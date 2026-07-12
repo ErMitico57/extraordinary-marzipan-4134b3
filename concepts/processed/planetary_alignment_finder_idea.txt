@@ -1,2 +1,2 @@
 Concept: planetary alignment finder
-Description: A tool that helps users find and visualize upcoming planetary alignments, showing which planets will be visible together in the night sky on any given date.
+Description: A tool that calculates and displays upcoming planetary alignments (conjunctions, oppositions) based on the user's location and date range. Shows a visual representation of the planets in the sky and provides astrological interpretations within the celestial almanac theme.
