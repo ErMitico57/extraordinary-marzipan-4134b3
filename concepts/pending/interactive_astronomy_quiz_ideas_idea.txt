@@ -1,2 +1,0 @@
-Concept: interactive astronomy quiz ideas
-Description: An interactive astronomy quiz that tests users' knowledge of space, planets, and celestial phenomena with engaging, educational questions and a space-themed interface.
