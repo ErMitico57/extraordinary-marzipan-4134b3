@@ -1,8 +1,8 @@
 # Astrofoto Heartbeat Log
 
-Last updated: Mon 13 Jul 2026 10:03 CEST
+Last updated: Mon 13 Jul 2026 10:04 CEST
 
-## This Heartbeat Cycle (Cron-triggered)
+## This Heartbeat Cycle (Manual trigger via auto_growth.sh)
 
 - SOUL.md read
 - USER.md read
@@ -16,5 +16,5 @@ Last updated: Mon 13 Jul 2026 10:03 CEST
 - Weather: Berlin Berlin: 🌤️  +20°C (from wttr.in)
 - Email/Calendar: Not configured - skipping
 - System: Updated heartbeat-state.json with current timestamps
-- Git Activity: Repo status: 6 uncommitted changes
-- Action: processed concept 'daily_horoscope_generator_widget_idea.txt'; generated micro-experience; committed and pushed; updated heartbeat logs.
+- Git Activity: Repo status: 0 uncommitted changes
+- Action: processed concept 'daily_horoscope_generator_widget_idea.txt' via auto_growth.sh; generated micro-experience at https://extraordinary-marzipan-4134b3.netlify.app/daily-horoscope-generator-widget.html; committed and pushed.
