@@ -108,7 +108,7 @@ Description: $snippet"
     preview=$(echo "$content" | cut -c -100)
     
     # Add to concepts array
-    CONCEPTS+=("{\"index\": $index, \"file\": \"$filename\", \"preview\": \"$prefix\"}")
+    CONCEPTS+=("{\"index\": $index, \"file\": \"$filename\", \"preview\": \"$preview\"}")
     
     echo "Created $filename" >> "$LOG_FILE" 2>&1
 done
