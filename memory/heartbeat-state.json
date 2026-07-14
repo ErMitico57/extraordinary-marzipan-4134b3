@@ -1,14 +1,10 @@
 {
-  "lastChecks": {
-    "email": 1783990865,
-    "calendar": 1783990865,
-    "concepts": 1784013416,
-    "weather": 1784013416,
-    "website": 1784013416,
-    "main_site": 1784013416,
-    "conversations": 1783990865,
-    "memoryMaintenance": 1784003465,
-    "git": 1784013416
-  },
-  "lastHeartbeat": 1784013416
+  "website": 1784019715,
+  "main_site": 1784019715,
+  "concepts": 1784019715,
+  "weather": 1784019715,
+  "conversations": 1784019715,
+  "memoryMaintenance": 1784019715,
+  "git": 1784019715,
+  "lastHeartbeat": 1784019715
 }
