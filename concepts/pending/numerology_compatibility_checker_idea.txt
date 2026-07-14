@@ -1,0 +1,2 @@
+Concept: Numerology compatibility checker
+Description: A tool that compares two people's life path numbers (or other numerology numbers) to determine relationship compatibility.

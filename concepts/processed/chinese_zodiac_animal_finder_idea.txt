@@ -1,0 +1,2 @@
+Concept: Chinese zodiac animal finder
+Description: A tool that determines your Chinese zodiac animal based on your birth year, providing traits and compatibility.

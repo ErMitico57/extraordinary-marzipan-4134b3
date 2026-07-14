@@ -1,0 +1,2 @@
+Concept: Ascendant sign calculator
+Description: A tool that calculates your rising sign (ascendant) using your exact birth time and location, showing how you present yourself to the world.
