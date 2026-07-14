@@ -1,2 +1,0 @@
-Concept: Moon sign calculator
-Description: A tool that calculates your moon sign based on your birth date, time, and location, revealing your emotional inner self.
