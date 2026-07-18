@@ -1,10 +1,14 @@
 {
-  "lastHeartbeat": 1784363735,
+  "lastHeartbeat": 1784367152,
   "lastChecks": {
-    "email": null,
-    "calendar": null,
+    "email": 1784367152,
+    "calendar": 1784367152,
     "mentions": null,
-    "weather": null,
-    "concept": 1784363735
+    "weather": 1784367152,
+    "concept": 1784363735,
+    "concepts": 1784367152,
+    "website": 1784367152,
+    "main_site": 1784367152,
+    "conversations": 1784367152
   }
 }
