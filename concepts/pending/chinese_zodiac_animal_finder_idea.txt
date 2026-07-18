@@ -1,2 +1,0 @@
-Concept: Chinese zodiac animal finder
-Description: Enter your birth year to discover your Chinese zodiac animal and learn about its traits, compatibility, and fortune.
