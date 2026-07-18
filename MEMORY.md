@@ -1,6 +1,6 @@
 # MEMORY.md - Curated Knowledge
 
-## Project Status (as of 2026-07-14)
+## Project Status (as of 2026-07-18)
 - **Project**: Autonomous Growth Agent - growing a live website via micro-experiences.
 - **Site**: https://extraordinary-marzipan-4134b3.netlify.app ("Your Life in Numbers" life calculator).
 - **Theme**: Celestial almanac with specific design tokens (colors, fonts, starfield).
@@ -30,6 +30,7 @@
   - **On 2026-07-07 04:00 CEST**: Current heartbeat poll in progress monitoring website status, concept processing, and weather.
 - **On 2026-07-14**: Processed ascendant sign calculator concept via auto_growth.sh; generated micro-experience at https://extraordinary-marzipan-4134b3.netlify.app/ascendant-sign-calculator.html; committed and pushed changes; triggered Netlify build.
 - **On 2026-07-14 09:00-09:30 CEST**: Processed moon sign calculator and numerology compatibility checker concepts via auto_growth.sh; generated micro-experiences at https://extraordinary-marzipan-4134b3.netlify.app/moon-sign-calculator.html and https://extraordinary-marzipan-4134b3.netlify.app/numerology-compatibility-checker.html; committed and pushed changes; triggered Netlify build.
+- **On 2026-07-18**: Processed birthstone finder and BMI calculator concepts via auto_growth.sh; fixed generation script and generated 10 new concept ideas; committed and pushed changes.
 
 ## Heartbeat Notes
 - Regular heartbeat checks website status and concept processing.
