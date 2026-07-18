@@ -1,1 +1,42 @@
-Concept generation started at Sat Jul 18 08:01:56 CEST 2026
+Concept generation started at Sat Jul 18 08:32:33 CEST 2026
+Processing query 1: Life path number calculator
+./generate_concepts.sh: line 42: oxylabs_web_search: command not found
+Warning: web search failed for query: Life path number calculator
+Created life_path_number_calculator_idea.txt
+Processing query 2: Moon sign calculator
+./generate_concepts.sh: line 42: oxylabs_web_search: command not found
+Warning: web search failed for query: Moon sign calculator
+Created moon_sign_calculator_idea.txt
+Processing query 3: Ascendant sign calculator
+./generate_concepts.sh: line 42: oxylabs_web_search: command not found
+Warning: web search failed for query: Ascendant sign calculator
+Created ascendant_sign_calculator_idea.txt
+Processing query 4: Numerology compatibility checker
+./generate_concepts.sh: line 42: oxylabs_web_search: command not found
+Warning: web search failed for query: Numerology compatibility checker
+Created numerology_compatibility_checker_idea.txt
+Processing query 5: Birthstone finder by month
+./generate_concepts.sh: line 42: oxylabs_web_search: command not found
+Warning: web search failed for query: Birthstone finder by month
+Created birthstone_finder_by_month_idea.txt
+Processing query 6: Chinese zodiac animal finder
+./generate_concepts.sh: line 42: oxylabs_web_search: command not found
+Warning: web search failed for query: Chinese zodiac animal finder
+Created chinese_zodiac_animal_finder_idea.txt
+Processing query 7: Lucky number generator for today
+./generate_concepts.sh: line 42: oxylabs_web_search: command not found
+Warning: web search failed for query: Lucky number generator for today
+Created lucky_number_generator_for_today_idea.txt
+Processing query 8: Personal year number calculator
+./generate_concepts.sh: line 42: oxylabs_web_search: command not found
+Warning: web search failed for query: Personal year number calculator
+Created personal_year_number_calculator_idea.txt
+Processing query 9: Angel number meaning interpreter
+./generate_concepts.sh: line 42: oxylabs_web_search: command not found
+Warning: web search failed for query: Angel number meaning interpreter
+Created angel_number_meaning_interpreter_idea.txt
+Processing query 10: Numerology name calculator
+./generate_concepts.sh: line 42: oxylabs_web_search: command not found
+Warning: web search failed for query: Numerology name calculator
+Created numerology_name_calculator_idea.txt
+Concept generation completed at Sat Jul 18 08:32:33 CEST 2026

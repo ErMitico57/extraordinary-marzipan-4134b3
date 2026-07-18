@@ -1,0 +1,2 @@
+Concept: Birthstone finder by month
+Description: Find your birthstone based on your birth month, learn about its meaning, properties, and historical significance.

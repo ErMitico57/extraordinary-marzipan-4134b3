@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -e
-
 LOG_FILE="/data/.openclaw/workspace/logs/concept_generation.log"
 PENDING_DIR="/data/.openclaw/workspace/concepts/pending"
 MAP_FILE="$PENDING_DIR/map.json"

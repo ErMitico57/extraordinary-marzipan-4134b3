@@ -1,0 +1,2 @@
+Concept: Personal year number calculator
+Description: Calculate your personal year number to understand the themes and opportunities for the current year of your life.

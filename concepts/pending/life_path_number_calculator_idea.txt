@@ -1,0 +1,2 @@
+Concept: Life path number calculator
+Description: A tool that calculates your life path number from your birthdate, revealing insights about your life's purpose and challenges.

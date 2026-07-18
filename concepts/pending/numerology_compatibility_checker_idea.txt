@@ -1,0 +1,2 @@
+Concept: Numerology compatibility checker
+Description: Compare two people's numerology numbers to see how compatible they are in relationships, friendship, or business.

@@ -1,0 +1,2 @@
+Concept: Numerology name calculator
+Description: Calculate the numerological value of your name to uncover insights about your personality, destiny, and soul urge.
