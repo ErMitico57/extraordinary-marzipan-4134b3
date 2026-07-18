@@ -1,2 +1,2 @@
 Concept: loan interest calculator
-Description: A loan interest calculator that computes monthly payments, total interest paid, and generates an amortization schedule for mortgages, auto loans, student loans, and personal loans. Features a celestial orrery animation where planets orbiting a sun represent payment periods, with orbital speed indicating interest accumulation.
+Description: A simple interactive web tool that provides the functionality described in the query, designed to fit the celestial almanac theme of the site.

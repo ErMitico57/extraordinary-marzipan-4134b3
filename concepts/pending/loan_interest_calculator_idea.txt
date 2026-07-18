@@ -1,2 +1,0 @@
-Concept: loan interest calculator
-Description: A simple interactive web tool that provides the functionality described in the query, designed to fit the celestial almanac theme of the site.
