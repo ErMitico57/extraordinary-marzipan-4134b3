@@ -1,1 +1,10 @@
-{"lastHeartbeat": 1784343679, "lastChecks": {"email": null, "calendar": null, "mentions": null, "weather": null}}
+{
+  "lastHeartbeat": 1784343839,
+  "lastChecks": {
+    "email": null,
+    "calendar": null,
+    "mentions": null,
+    "weather": null,
+    "concept": 1784343839
+  }
+}
