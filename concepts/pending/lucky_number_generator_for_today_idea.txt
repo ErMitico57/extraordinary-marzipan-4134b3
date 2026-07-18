@@ -1,2 +1,0 @@
-Concept: Lucky number generator for today
-Description: Generate a lucky number for the day based on numerology or astrological influences, perfect for games or decisions.
