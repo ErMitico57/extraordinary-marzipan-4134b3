@@ -1,2 +1,2 @@
 Concept: tip calculator split bill
-Description: An interactive tip and bill splitter that calculates tip percentages, splits totals among any number of people, and includes options for tax inclusion and rounding. Features a celestial theme with shooting star animations for each person added and constellation backgrounds representing shared expenses.
+Description: A simple interactive web tool that provides the functionality described in the query, designed to fit the celestial almanac theme of the site.
