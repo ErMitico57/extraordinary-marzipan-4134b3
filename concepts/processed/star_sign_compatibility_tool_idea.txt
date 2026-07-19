@@ -1,2 +1,2 @@
 Concept: star sign compatibility tool
-Description: An interactive compatibility analyzer that compares two zodiac signs to provide insights on love, friendship, and communication dynamics. Features a celestial wheel visualization and personalized advice based on elemental affinities within the almanac theme.
+Description: A simple interactive web tool that provides the functionality described in the query, designed to fit the celestial almanac theme of the site.
