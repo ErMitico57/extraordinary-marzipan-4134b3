@@ -1,2 +1,2 @@
 Concept: moon phase calculator
-Description: A moon phase calculator that allows users to input a date and see the corresponding moon phase, with visualizations and celestial-themed design.
+Description: A simple interactive web tool that provides the functionality described in the query, designed to fit the celestial almanac theme of the site.
