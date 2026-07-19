@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Numerology Name Calculator</title>
+<meta name="description" content="Calculate the numerological value of your name to uncover insights about your personality, destiny, and soul urge." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --ink:#0a0f24;
+    --ink-2:#10173a;
+    --panel:#121a3f;
+    --panel-2:#0d1330;
+    --void:#05081a;
+    --line:rgba(232,180,104,.18);
+    --line-soft:rgba(255,255,255,.07);
+    --gold:#e8b468;
+    --gold-2:#f2d29a;
+    --gold-deep:#caa055;
+    --cream:#f3ead9;
+    --muted:#9298bd;
+    --muted-2:#6a7099;
+    --star:#6fa8ff;
+    --serif:'Fraunces', Georgia, 'Times New Roman', serif;
+    --sans:'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    --mono:'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:var(--sans);
+    color:var(--cream);
+    background:
+      radial-gradient(1200px 700px at 50% -10%, #1c2552 0%, transparent 60%),
+      radial-gradient(900px 600px at 85% 20%, #1a1340 0%, transparent 55%),
+      linear-gradient(180deg, var(--ink) 0%, var(--void) 100%);
+    background-attachment:fixed;
+    min-height:100vh;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  /* faint starfield */
+  body::before{
+    content:"";
+    position:fixed; inset:0; z-index:0; pointer-events:none;
+    background-image:
+      radial-gradient(1px 1px at 12% 18%, rgba(255,255,255,.55), transparent),
+      radial-gradient(1px 1px at 28% 62%, rgba(255,255,255,.35), transparent),
+      radial-gradient(1px 1px at 47% 12%, rgba(255,255,255,.5), transparent),
+      radial-gradient(1.4px 1.4px at 66% 78%, rgba(255,255,255,.4), transparent),
+      radial-gradient(1px 1px at 78% 32%, rgba(255,255,255,.45), transparent),
+      radial-gradient(1px 1px at 88% 66%, rgba(255,255,255,.3), transparent),
+      radial-gradient(1px 1px at 8% 86%, rgba(255,255,255,.3), transparent);
+    opacity:.7;
+  }
+
+  .wrap{position:relative; z-index:1; max-width:960px; margin:0 auto; padding:0 22px;}
+
+  /* ---------------- HEADER ---------------- */
+  header.site{padding:34px 0 8px; text-align:center;}
+  .brand{
+    font-family:var(--mono); font-weight:700; letter-spacing:.34em;
+    font-size:12px; color:var(--gold); text-transform:uppercase;
+    display:inline-flex; align-items:center; gap:10px;
+  }
+  .brand::before,.brand::after{content:""; width:26px; height:1px; background:linear-gradient(90deg,transparent,var(--gold));}
+  .brand::after{background:linear-gradient(90deg,var(--gold),transparent);}
+
+  /* ---------------- HERO ---------------- */
+  .hero{padding:30px 0 6px; text-align:center;}
+  .hero h1{
+    font-family:var(--serif); font-weight:600;
+    font-size:clamp(32px, 6vw, 48px); line-height:1.02;
+    margin:14px 0 0; letter-spacing:-.01em;
+  }
+  .hero h1 em{font-style:italic; color:var(--gold-2);}
+  .hero p.lede{
+    color:var(--muted); font-size:clamp(14px,2.2vw,16px);
+    max-width:560px; margin:18px auto 0;
+  }
+
+  /* ---------------- FORM CARD ---------------- */
+  .entry{
+    margin:34px auto 0; max-width:560px;
+    background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.01));
+    border:1px solid var(--line);
+    border-radius:18px; padding:26px 24px 24px;
+    box-shadow:0 30px 80px -40px rgba(0,0,0,.9), inset 0 1px 0 rgba(255,255,255,.05);
+    backdrop-filter:blur(6px);
+  }
+  .entry .eyebrow{
+    font-family:var(--mono); font-size:10.5px; letter-spacing:.28em;
+    text-transform:uppercase; color:var(--gold); text-align:center; margin-bottom:18px;
+  }
+  .field-row{display:flex; gap:14px;}
+  .field{flex:1; margin-bottom:14px;}
+  .field.full{flex-basis:100%;}
+  label{
+    display:block; font-size:12px; font-weight:500; letter-spacing:.04em;
+    color:var(--muted); margin-bottom:7px; text-transform:uppercase;
+  }
+  input{
+    width:100%; padding:13px 14px; border-radius:11px;
+    background:rgba(5,8,26,.6); border:1px solid var(--line-soft);
+    color:var(--cream); font-family:var(--sans); font-size:15px;
+    transition:border-color .2s, box-shadow .2s;
+  }
+  input::placeholder{color:var(--muted-2);}
+  input:focus{outline:none; border-color:var(--gold); box-shadow:0 0 0 3px rgba(232,180,104,.16);}
+  .hint{font-size:11.5px; color:var(--muted-2); margin-top:2px;}
+
+  .cta{
+    width:100%; margin-top:8px; padding:15px 18px; border:none; cursor:pointer;
+    border-radius:12px; font-family:var(--sans); font-weight:600; font-size:15.5px;
+    color:#241803; letter-spacing:.01em;
+    background:linear-gradient(180deg, var(--gold-2), var(--gold-deep));
+    box-shadow:0 14px 30px -12px rgba(232,180,104,.6), inset 0 1px 0 rgba(255,255,255,.4);
+    transition:transform .15s, box-shadow .2s, filter .2s;
+  }
+  .cta:hover{transform:translateY(-1px); filter:brightness(1.04);}
+  .cta:active{transform:translateY(0);}
+  .err{color:#ff9b8a; font-size:13px; margin-top:10px; text-align:center; min-height:1px;}
+
+  /* ---------------- RESULTS ---------------- */
+  #results{display:none; padding:18px 0 0;}
+  #results.show{display:block;}
+  .reveal{opacity:0; transform:translateY(18px); animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards;}
+  @keyframes rise{to{opacity:1; transform:none;}}
+
+  .header-results{text-align:center; margin:30px 0 20px;}
+  .header-results h2{
+    font-family:var(--serif); font-weight:500;
+    font-size:clamp(24px, 4.5vw, 30px); margin:0 0 8px;
+    color:var(--cream);
+  }
+  .header-results p{
+    color:var(--muted); font-size:clamp(13px, 2.2vw, 15px);
+    max-width:500px; margin:0 auto;
+  }
+
+  .result-box{
+    background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.008));
+    border:1px solid var(--line-soft);
+    border-radius:16px;
+    padding:20px;
+    text-align:center;
+    margin:20px 0;
+  }
+  .result-number{
+    font-family:var(--mono);
+    font-weight:700;
+    font-size:clamp(30px, 6vw, 48px);
+    letter-spacing:.5px;
+    color:var(--cream);
+    margin:12px 0 8px;
+  }
+  .result-label{
+    font-family:var(--sans);
+    font-size:18px;
+    color:var(--gold-2);
+    margin-bottom:12px;
+  }
+  .result-meaning{
+    font-family:var(--serif);
+    font-size:15px;
+    color:var(--muted);
+    line-height:1.6;
+    max-height:120px;
+    overflow:hidden;
+    text-align:left;
+  }
+  .result-meaning::after{
+    content:'';
+    display:block;
+    height:40px;
+    background:linear-gradient(to bottom, transparent, rgba(10,15,36,0.8));
+    margin-top:-20px;
+    position:relative;
+    z-index:1;
+  }
+
+  /* FOOTER */
+  footer.site{
+    margin:60px 0 30px;
+    text-align:center;
+    color:var(--muted-2);
+    font-size:12.5px;
+  }
+  footer.site .fb{
+    font-family:var(--mono);
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    font-size:10.5px;
+    color:var(--muted);
+  }
+
+  /* RESPONSIVE */
+  @media (max-width:480px){
+    .wrap{padding:0 16px;}
+    .hero h1{font-size:clamp(28px, 8vw, 36px);}
+    .button-group{flex-direction:column; align-items:center;}
+    .share-buttons{justify-content:center;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .reveal{animation:none; opacity:1; transform:none;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+    <!-- Three ad banners -->
+    <div class="ad-zone"><span class="ad-label">Advertisement</span><div class="ad-box">ad space · 1</div></div>
+    <div class="ad-zone"><span class="ad-label">Advertisement</span><div class="ad-box">ad space · 2</div></div>
+    <div class="ad-zone"><span class="ad-label">Advertisement</span><div class="ad-box">ad space · 3</div></div>
+
+  <header class="site">
+    <span class="brand">Numerology Tools</span>
+  </header>
+
+  <!-- ===================== HERO + FORM ===================== -->
+  <section class="hero" id="top">
+    <h1>Numerology Name Calculator</h1>
+    <p class="lede">Discover the hidden numbers in your name and what they reveal about your personality, destiny, and soul urge.</p>
+
+    <form class="entry" id="nameForm" autocomplete="off" novalidate>
+      <div class="eyebrow">Enter your full name</div>
+      <div class="field full">
+        <label for="fullName">Full Name (as written on birth certificate)</label>
+        <input type="text" id="fullName" placeholder="Enter your full name" required>
+        <div class="hint">Use only letters; spaces and hyphens are ignored.</div>
+      </div>
+      <button type="submit" class="cta">Calculate &nbsp;→</button>
+      <div class="err" id="err"></div>
+    </form>
+  </section>
+
+  <!-- ===================== RESULTS ===================== -->
+  <section id="results">
+
+    <div class="header-results">
+      <h2>Your Numerology Profile</h2>
+      <p>Each number reveals a different aspect of your being</p>
+    </div>
+
+    <div class="result-box" id="resultBox">
+      <div class="result-label">Life Path Number (from birth date)</div>
+      <div class="result-number" id="lifePathNumber">--</div>
+      <div class="result-meaning" id="lifePathMeaning">Calculate your name number first.</div>
+    </div>
+
+    <div class="result-box" id="resultBox2">
+      <div class="result-label">Expression Number (from name)</div>
+      <div class="result-number" id="expressionNumber">--</div>
+      <div class="result-meaning" id="expressionMeaning">Calculate your name number first.</div>
+    </div>
+
+    <div class="result-box" id="resultBox3">
+      <div class="result-label">Soul Urge Number (from vowels)</div>
+      <div class="result-number" id="soulUrgeNumber">--</div>
+      <div class="result-meaning" id="soulUrgeMeaning">Calculate your name number first.</div>
+    </div>
+
+    <div class="result-box" id="resultBox4">
+      <div class="result-label">Personality Number (from consonants)</div>
+      <div class="result-number" id="personalityNumber">--</div>
+      <div class="result-meaning" id="personalityMeaning">Calculate your name number first.</div>
+    </div>
+
+  </section>
+
+  <!-- ===================== INFO / CONTENT ===================== -->
+  <section class="info" id="about">
+    <h2>About Numerology</h2>
+    <p>Numerology is the study of the mystical relationship between numbers and living things. It asserts that numbers have a divine, mystical connection to events and that each number vibrates with its own energy.</p>
+    <p>The most common system is Pythagorean numerology, which assigns numerical values to letters:</p>
+    <ul style="color:var(--muted); font-size:15px; line-height:1.7; margin:16px 0;">
+      <li><strong>A, J, S</strong> = 1</li>
+      <li><strong>B, K, T</strong> = 2</li>
+      <li><strong>C, L, U</strong> = 3</li>
+      <li><strong>D, M, V</strong> = 4</li>
+      <li><strong>E, N, W</strong> = 5</li>
+      <li><strong>F, O, X</strong> = 6</li>
+      <li><strong>G, P, Y</strong> = 7</li>
+      <li><strong>H, Q, Z</strong> = 8</li>
+      <li><strong>I, R</strong> = 9</li>
+    </ul>
+    <p>To calculate your Expression Number (also called Destiny Number):</p>
+    <ol style="color:var(--muted); font-size:15px; line-height:1.7; margin:16px 0;">
+      <li>Write out your full name as it appears on your birth certificate.</li>
+      <li>Assign each letter its numerical value.</li>
+      <li>Add up all the numbers.</li>
+      <li>Reduce the sum to a single digit by adding the digits together repeatedly, unless you get 11 or 22 (master numbers).</li>
+    </ol>
+    <p>Similarly, the Soul Urge Number (Heart's Desire) uses only the vowels, and the Personality Number uses only the consonants.</p>
+  </section>
+
+  <footer class="site">
+    <div class="fb">Numerology Tools &copy; 2026</div>
+  </div>
+
+<script>
+  // Numerology calculation functions
+  function getLetterValue(letter) {
+    const letterUpper = letter.toUpperCase();
+    switch (letterUpper) {
+      case 'A': case 'J': case 'S': return 1;
+      case 'B': case 'K': case 'T': return 2;
+      case 'C': case 'L': case 'U': return 3;
+      case 'D': case 'M': case 'V': return 4;
+      case 'E': case 'N': case 'W': return 5;
+      case 'F': case 'O': case 'X': return 6;
+      case 'G': case 'P': case 'Y': return 7;
+      case 'H': case 'Q': case 'Z': return 8;
+      case 'I': case 'R': return 9;
+      default: return 0; // for non-alphabetic characters
+    }
+  }
+
+  function reduceNumber(num) {
+    if (num === 11 || num === 22) return num; // master numbers
+    let sum = 0;
+    while (num > 0) {
+      sum += num % 10;
+      num = Math.floor(num / 10);
+    }
+    if (sum >= 10) return reduceNumber(sum);
+    return sum;
+  }
+
+  function calculateNameNumbers(name) {
+    // Remove non-alphabetic characters and spaces
+    const cleanName = name.replace(/[^a-zA-Z]/g, '');
+    if (cleanName.length === 0) return null;
+    
+    let total = 0;
+    let vowelsTotal = 0;
+    let consonantsTotal = 0;
+    const vowels = new Set(['A', 'E', 'I', 'O', 'U']);
+    
+    for (let i = 0; i < cleanName.length; i++) {
+      const char = cleanName[i].toUpperCase();
+      const value = getLetterValue(char);
+      total += value;
+      if (vowels.has(char)) {
+        vowelsTotal += value;
+      } else {
+        consonantsTotal += value;
+      }
+    }
+    
+    return {
+      expression: reduceNumber(total),
+      soulUrge: reduceNumber(vowelsTotal),
+      personality: reduceNumber(consonantsTotal)
+    };
+  }
+
+  function getNumberMeaning(num, type) {
+    const meanings = {
+      expression: {
+        1: "Natural leader, independent, ambitious, and driven. You have a strong desire to achieve and stand out from the crowd.",
+        2: "Diplomatic, cooperative, and sensitive. You excel in partnerships and creating harmony in relationships.",
+        3: "Creative, expressive, and optimistic. You have a gift for communication and bringing joy to others.",
+        4: "Practical, disciplined, and hardworking. You value stability and build solid foundations for success.",
+        5: "Adventurous, freedom-loving, and versatile. You thrive on change and new experiences.",
+        6: "Nurturing, responsible, and service-oriented. You find fulfillment in caring for others and creating harmony.",
+        7: "Analytical, introspective, and spiritual. You seek truth and wisdom through introspection and study.",
+        8: "Ambitious, authoritative, and business-minded. You have a talent for material success and leadership.",
+        9: "Humanitarian, compassionate, and idealistic. You are driven by a desire to make the world a better place.",
+        11: "Intuitive, inspirational, and visionary. You have heightened spiritual awareness and inspirational qualities.",
+        22: "Master builder, practical idealist, and visionary. You can turn grand dreams into tangible reality."
+      },
+      soulUrge: {
+        1: "You desire independence, leadership, and to be original. You want to stand out and make your mark.",
+        2: "You seek harmony, cooperation, and meaningful connections. You want to belong and contribute to a group.",
+        3: "You desire self-expression, creativity, and joy. You want to inspire and uplift others through your talents.",
+        4: "You want stability, security, and a solid foundation. You value hard work and building something lasting.",
+        5: "You crave freedom, adventure, and variety. You want to experience life to the fullest without restrictions.",
+        6: "You desire to love, nurture, and be of service to others. You find fulfillment in creating harmony and beauty.",
+        7: "You seek knowledge, wisdom, and spiritual understanding. You want time for contemplation and inner growth.",
+        8: "You desire success, recognition, and material abundance. You want to be influential and financially secure.",
+        9: "You long to make a difference in the world through compassion and humanitarian efforts.",
+        11: "You are drawn to spiritual illumination and inspiring others. You have a deep inner wisdom to share.",
+        22: "You want to build something of lasting value that benefits humanity. You have grand vision and practical skills."
+      },
+      personality: {
+        1: "You appear confident, assertive, and pioneering. Others see you as a leader and someone who takes charge.",
+        2: "You come across as gentle, cooperative, and diplomatic. People see you as a peacemaker and supportive partner.",
+        3: "You seem expressive, charming, and entertaining. Others perceive you as creative, fun-loving, and sociable.",
+        4: "You appear practical, reliable, and hardworking. People see you as disciplined, trustworthy, and detail-oriented.",
+        5: "You seem adventurous, versatile, and freedom-loving. Others view you as energetic, curious, and always seeking new experiences.",
+        6: "You appear warm, nurturing, and responsible. People see you as caring, family-oriented, and helpful to others.",
+        7: "You come across as thoughtful, introspective, and mysterious. Others see you as wise, spiritual, and somewhat reserved.",
+        8: "You appear strong, authoritative, and business-like. People perceive you as successful, confident, and in control.",
+        9: "You seem compassionate, idealistic, and selfless. Others see you as tolerant, sympathetic, and globally conscious.",
+        11: "You appear highly intuitive and spiritually aware. Others sense your depth, sensitivity, and inspirational quality.",
+        22: "You come across as capable, powerful, and visionary. People see you as someone who can accomplish great things."
+      }
+    };
+    
+    return meanings[type][num] || "Meaning not available.";
+  }
+
+  // Event listener for form submission
+  document.getElementById('nameForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    document.getElementById('err').textContent = '';
+    
+    const nameInput = document.getElementById('fullName').value.trim();
+    if (!nameInput) {
+      document.getElementById('err').textContent = 'Please enter your name.';
+      return;
+    }
+    
+    const results = calculateNameNumbers(nameInput);
+    if (!results) {
+      document.getElementById('err').textContent = 'Please enter a valid name with at least one letter.';
+      return;
+    }
+    
+    // Display results
+    document.getElementById('expressionNumber').textContent = results.expression;
+    document.getElementById('expressionMeaning').textContent = getNumberMeaning(results.expression, 'expression');
+    
+    document.getElementById('soulUrgeNumber').textContent = results.soulUrge;
+    document.getElementById('soulUrgeMeaning').textContent = getNumberMeaning(results.soulUrge, 'soulUrge');
+    
+    document.getElementById('personalityNumber').textContent = results.personality;
+    document.getElementById('personalityMeaning').textContent = getNumberMeaning(results.personality, 'personality');
+    
+    // For life path, we need birth date - we'll leave it as N/A for now
+    document.getElementById('lifePathNumber').textContent = '--';
+    document.getElementById('lifePathMeaning').textContent = 'Enter your birth date in the life path calculator for this number.';
+    
+    // Show results section
+    document.getElementById('results').classList.add('show');
+    
+    // Scroll to results
+    setTimeout(() => {
+      document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
+  });
+</script>
+</body>
+</html>
