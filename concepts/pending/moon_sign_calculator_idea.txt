@@ -1,2 +1,0 @@
-Concept: Moon sign calculator
-Description: Discover your moon sign based on your birth date, time, and location, revealing your inner emotions and subconscious self.
