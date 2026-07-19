@@ -1,15 +1,19 @@
 {
-  "lastHeartbeat": 1784441124,
+  "lastHeartbeat": 1784444601,
   "lastChecks": {
-    "email": 1784441124,
-    "calendar": 1784441124,
-    "mentions": null,
-    "weather": 1784441124,
-    "concept": 1784441124,
-    "concepts": 1784441124,
-    "website": 1784441124,
-    "main_site": 1784441124,
-    "conversations": 1784441124,
-    "git": 1784441124
+    "email": 1784444601,
+    "calendar": 1784444601,
+    "mentions": 1784444601,
+    "weather": 1784444601,
+    "concept": 1784444601,
+    "concepts": 1784444601,
+    "website": 1784444601,
+    "main_site": 1784444601,
+    "conversations": 1784444601,
+    "git": 1784444601
+  },
+  "conceptCounts": {
+    "pending": 9,
+    "processed": 30
   }
 }
