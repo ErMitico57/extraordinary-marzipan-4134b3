@@ -1,0 +1,2 @@
+Concept: moon phase calculator
+Description: An interactive tool that calculates the current moon phase for any given date and displays it with a visual representation.
