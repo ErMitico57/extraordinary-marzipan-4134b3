@@ -5,5 +5,5 @@
 - [x] Check git status and push if needed
 - [x] Check for unread messages/mentions
 - [x] Update memory/heartbeat-state.json
-- [ ] Review memory files for updates to MEMORY.md (if main session)
+- [x] Review memory files for updates to MEMORY.md (if main session)
 - [ ] Perform any needed maintenance
