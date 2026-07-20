@@ -1,2 +1,2 @@
 Concept: daily horoscope generator widget
-Description: A widget that generates a daily horoscope based on the user's zodiac sign, providing a fun and insightful daily reading.
+Description: A daily horoscope generator widget that provides personalized horoscope readings based on zodiac signs, featuring a celestial-themed interface.
