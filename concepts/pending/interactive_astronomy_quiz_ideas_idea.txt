@@ -1,2 +1,0 @@
-Concept: interactive astronomy quiz ideas
-Description: An interactive astronomy quiz that asks questions about stars, planets, and constellations, designed with a celestial almanac theme and instant feedback.
