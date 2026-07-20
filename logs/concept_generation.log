@@ -36,3 +36,34 @@ Sun Jul 19 09:01:38 CEST 2026: Error searching for 'moon phase calculator': INSU
 Sun Jul 19 09:01:47 CEST 2026: Error searching for 'planetary alignment finder': INSUFFIC20
 [2026-07-20 07:00:44 UTC] Error for query 'best free online calculator tools 2024': Oxylabs search failed (400): INSUFFICIENT_BALANCE
 [2026-07-20 07:00:49 UTC] Error for query 'interactive astronomy quiz ideas': Oxylabs search failed (400): INSUFFICIENT_BALANCE
+Processing query: best free online calculator tools 2024
+./process_queries.sh: line 35: oxylabs_web_search: command not found
+[Mon Jul 20 21:01:02 CEST 2026] ERROR: Failed to search for query: best free online calculator tools 2024
+Processing query: interactive astronomy quiz ideas
+./process_queries.sh: line 35: oxylabs_web_search: command not found
+[Mon Jul 20 21:01:02 CEST 2026] ERROR: Failed to search for query: interactive astronomy quiz ideas
+Processing query: daily horoscope generator widget
+./process_queries.sh: line 35: oxylabs_web_search: command not found
+[Mon Jul 20 21:01:02 CEST 2026] ERROR: Failed to search for query: daily horoscope generator widget
+Processing query: moon phase calculator
+./process_queries.sh: line 35: oxylabs_web_search: command not found
+[Mon Jul 20 21:01:02 CEST 2026] ERROR: Failed to search for query: moon phase calculator
+Processing query: planetary alignment finder
+./process_queries.sh: line 35: oxylabs_web_search: command not found
+[Mon Jul 20 21:01:02 CEST 2026] ERROR: Failed to search for query: planetary alignment finder
+Processing query: star sign compatibility tool
+./process_queries.sh: line 35: oxylabs_web_search: command not found
+[Mon Jul 20 21:01:02 CEST 2026] ERROR: Failed to search for query: star sign compatibility tool
+Processing query: random name generator for babies
+./process_queries.sh: line 35: oxylabs_web_search: command not found
+[Mon Jul 20 21:01:02 CEST 2026] ERROR: Failed to search for query: random name generator for babies
+Processing query: tip calculator split bill
+./process_queries.sh: line 35: oxylabs_web_search: command not found
+[Mon Jul 20 21:01:02 CEST 2026] ERROR: Failed to search for query: tip calculator split bill
+Processing query: BMI calculator simple
+./process_queries.sh: line 35: oxylabs_web_search: command not found
+[Mon Jul 20 21:01:02 CEST 2026] ERROR: Failed to search for query: BMI calculator simple
+Processing query: loan interest calculator
+./process_queries.sh: line 35: oxylabs_web_search: command not found
+[Mon Jul 20 21:01:02 CEST 2026] ERROR: Failed to search for query: loan interest calculator
+Processed 10 queries. Created 0 successful.
