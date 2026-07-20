@@ -1,19 +1,19 @@
 {
-  "lastHeartbeat": 1784512860,
+  "lastHeartbeat": 1784518337,
   "lastChecks": {
     "email": 1784449905,
     "calendar": 1784449905,
     "mentions": 1784449905,
     "weather": 1784457067,
-    "concept": 1784512860,
-    "concepts": 1784512860,
+    "concept": 1784518337,
+    "concepts": 1784518337,
     "website": 1784512860,
     "main_site": 1784512860,
     "conversations": 1784512860,
-    "git": 1784512860
+    "git": 1784518337
   },
   "conceptCounts": {
-    "pending": 0,
+    "pending": 3,
     "processed": 30
   }
 }
