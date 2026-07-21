@@ -1,2 +1,2 @@
 Concept: planetary alignment finder
-Description: A planetary alignment finder that shows upcoming planetary alignments and conjunctions, allowing users to visualize celestial events in a starry-themed interface.
+Description: A planetary alignment finder that shows upcoming pl
