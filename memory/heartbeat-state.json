@@ -1,12 +1,12 @@
 {
   "conceptCounts": {
-    "pending": 2,
+    "pending": 0,
     "processed": 30
   },
-  "heartbeat": 1784817080,
+  "heartbeat": 1784820770,
   "lastChecks": {
-    "email": null,
-    "calendar": null,
-    "weather": null
+    "email": 1784820770,
+    "calendar": 1784820770,
+    "weather": 1784820770
   }
 }
