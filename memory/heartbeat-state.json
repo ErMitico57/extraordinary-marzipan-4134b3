@@ -3,5 +3,10 @@
     "pending": 2,
     "processed": 30
   },
-  "heartbeat": 1784802758
+  "heartbeat": 1784809928,
+  "lastChecks": {
+    "email": null,
+    "calendar": null,
+    "weather": 1784809928
+  }
 }
