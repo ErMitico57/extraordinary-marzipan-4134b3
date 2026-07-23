@@ -296,6 +296,6 @@ JULY 18, 2026 - ENHANCEMENTS:
 - Concept queue: 0 pending, 30 processed (as of latest heartbeat).
 - Baby-name-generator micro-experience live and linked from homepage.
 - No new concepts processed today due to Oxylabs balance issues preventing web fetching for concept generation.
-- Git repository: local changes to memory/heartbeat-state.json and HEARTBEAT.md from heartbeat updates; committed and pushed.
+- Git repository: local changes to memory/2026-07-23.md, memory/heartbeat-state.json, and logs/concept_generation.log from heartbeat updates; committed and pushed.
 - Weather: Berlin 🌤️ +16°C (from heartbeat log).
 - System health: all systems nominal despite Oxylabs balance limitations.
