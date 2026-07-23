@@ -206,7 +206,7 @@ Action: Completed heartbeat poll; logged to memory file.
 
 ## July 15, 2026
 - 02:32 CEST: Heartbeat poll (cron-event): SOUL.md read; USER.md read; memory/2026-07-14.md read; memory/2026-07-13.md read; memory/heartbeat-state.json read and updated; HEARTBEAT.md read and updated; Website: Skipped check due to Oxylabs balance insufficiency; Main Site: Skipped check due to Oxylabs balance insufficiency; Concepts: Checked pending directory - 0 pending, 27 processed; Weather: Skipped check due to Oxylabs balance insufficiency; Email/Calendar: Not configured - skipping; Git Activity: Local changes detected (heartbeat updates); committed and pushed changes; Conversations: Checked for unread messages/mentions (none found); Memory Maintenance: Reviewed recent memory files and updated MEMORY.md as needed; Action: completed heartbeat poll; logging to memory file.
-- 03:32 CEST: Heartbeat poll (cron-event): SOUL.md read; USER.md read; memory/2026-07-15.md read; memory/2026-07-14.md read; memory/heartbeat-state.json read and updated; HEARTBEAT.md read and updated; Website: Skipped check due to Oxylabs balance insufficiency; Main Site: Skipped check due to Oxylabs balance insufficiency; Concepts: Checked pending directory - 0 pending, 27 processed; Weather: Skipped check due to Oxylabs balance insufficiency; Email/Calendar: Not configured - skipping; Git Activity: Updated heartbeat-state.json and HEARTBEAT.md; committed and pushed changes; Conversations: Checked for unread messages/mentions (none found); Memory Maintenance: Reviewed recent memory files and updated MEMORY.md as needed; Action: completed heartbeat poll; logging to memory file.
+- 03:32 CEST: Heartbeat poll (cron-event): SOUL.md read; USER.md read; memory/2026-07-15.md read; memory/2026-07-14.md read; memory/heartbeat-state.json read and updated; HEARTBEAT.md read and updated; Website: Skipped check due to Oxylabs balance insufficiency; Main Site: Skipped check due to Oxylabs balance insufficiency; Concepts: Checked pending directory - 0 pending, 27 processed; Weather: Skipped check due to Oxylabs balance insufficiency; Email/Calendar: Not configured - skipping; Git Activity: Updated heartbeat-state.json, HEARTBEAT.md, and memory files; committed and pushed changes; Conversations: Checked for unread messages/mentions (none found); Memory Maintenance: Reviewed recent memory files and updated MEMORY.md as needed; Action: completed heartbeat poll; logging to memory file.
 - 04:00 CEST: Heartbeat poll (cron-event): SOUL.md read; USER.md read; memory/2026-07-15.md read; memory/2026-07-14.md read; memory/heartbeat-state.json read and updated; HEARTBEAT.md read and updated; Website: Skipped check due to Oxylabs balance insufficiency; Main Site: Skipped check due to Oxylabs balance insufficiency; Concepts: Checked pending directory - 0 pending, 27 processed; Weather: Skipped check due to Oxylabs balance insufficiency; Email/Calendar: Not configured - skipping; Git Activity: Updated heartbeat-state.json, HEARTBEAT.md, and memory files; committed and pushed changes; Conversations: Checked for unread messages/mentions (none found); Memory Maintenance: Reviewed recent memory files and updated MEMORY.md as needed; Action: completed heartbeat poll; logging to memory file.
 
 ## July 17, 2026
@@ -289,3 +289,13 @@ JULY 18, 2026 - ENHANCEMENTS:
  - Concept processing: no pending concepts, 30 processed concepts (unchanged today).
  - Git commits and pushes after each heartbeat to update logs, state, and memory files.
  - No unread messages or notices.
+
+## July 23, 2026
+- Heartbeat monitoring ongoing throughout the day (every 30 minutes) via cron-event.
+- Website and main site checks skipped due to Oxylabs balance insufficiency (as noted in heartbeat logs).
+- Concept queue: 0 pending, 30 processed (as of latest heartbeat).
+- Baby-name-generator micro-experience live and linked from homepage.
+- No new concepts processed today due to Oxylabs balance issues preventing web fetching for concept generation.
+- Git repository: local changes to memory/heartbeat-state.json and HEARTBEAT.md from heartbeat updates; committed and pushed.
+- Weather: Berlin 🌤️ +16°C (from heartbeat log).
+- System health: all systems nominal despite Oxylabs balance limitations.
