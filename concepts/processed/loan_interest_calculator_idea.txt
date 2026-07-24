@@ -1,2 +1,2 @@
 Concept: loan interest calculator
-Description: A simple interactive web tool that provides the functionality described in the query, designed to fit the celestial almanac theme of the site.
+Description: A loan interest calculator that computes simple or compound interest based on principal, rate, and time, displaying the total interest and total amount payable, with an amortization chart and a space-themed design.
