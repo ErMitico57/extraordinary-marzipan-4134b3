@@ -1,2 +1,2 @@
 Concept: BMI calculator simple
-Description: A simple interactive web tool that provides the functionality described in the query, designed to fit the celestial almanac theme of the site.
+Description: A simple Body Mass Index (BMI) calculator that takes weight and height inputs, computes the BMI, and categorizes the result into underweight, normal, overweight, or obese, with a visual gauge and celestial background.
