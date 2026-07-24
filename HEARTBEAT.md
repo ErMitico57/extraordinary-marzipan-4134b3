@@ -1,6 +1,6 @@
 # Astrofoto Heartbeat Log
 
-Last updated: Fri 24 Jul 2026 04:00 CEST
+Last updated: Fri 24 Jul 2026 04:31 CEST
 
 ## This Heartbeat Cycle (Cron-triggered)
 
@@ -13,7 +13,7 @@ Last updated: Fri 24 Jul 2026 04:00 CEST
 - Website: Status check skipped (Oxylabs balance insufficient)
 - Main Site: Status check skipped (Oxylabs balance insufficient)
 - Concepts: Checked pending directory - 0 concept files pending processing (plus map.json). 30 processed files.
-- Weather: Skipped check due to Oxylabs balance insufficiency
+- Weather: Berlin: 🌤️ +13°C (wttr.in fallback)
 - Email/Calendar: Not configured - skipping checks
 - System: Updated heartbeat-state.json with current timestamp
 - Action: completed heartbeat poll; logging to memory file.
