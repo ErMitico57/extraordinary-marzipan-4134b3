@@ -1,2 +1,2 @@
 Concept: star sign compatibility tool
-Description: A star sign compatibility tool that compares two zodiac signs and provides insights into their romantic, friendship, and work compatibility, designed with a celestial theme.
+Description: A star sign compatibility tool that compares two zodiac signs and provides a love, friendship, or work compatibility score based on astrological elements, presented with a complementary celestial illustration.
