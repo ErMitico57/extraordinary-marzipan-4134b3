@@ -1,6 +1,6 @@
 # Astrofoto Heartbeat Log
 
-Last updated: Sat 25 Jul 2026 13:00 CEST
+Last updated: Sat 25 Jul 2026 13:31 CEST
 
 ## This Heartbeat Cycle (Cron-triggered)
 - SOUL.md read
@@ -9,10 +9,10 @@ Last updated: Sat 25 Jul 2026 13:00 CEST
 - memory/2026-07-24.md read
 - memory/heartbeat-state.json read and updated
 - HEARTBEAT.md read
-- Website: Status check skipped due to Oxylabs balance insufficiency
-- Main Site: Status check skipped due to Oxylabs balance insufficiency
+- Website: Verified baby-name-generator loads successfully at https://extraordinary-marzipan-4134b3.netlify.app/baby-name-generator.html (HTTP 200)
+- Main Site: Verified Your Life in Numbers loads successfully at https://extraordinary-marzipan-4134b3.netlify.app/ (HTTP 200)
 - Concepts: Checked pending directory - 0 concept files pending processing (plus map.json). 30 processed files.
-- Weather: Skipped check due to Oxylabs balance insufficiency
+- Weather: Berlin: ☀️ +26°C (from wttr.in)
 - Email/Calendar: Not configured - skipping checks
-- System: Updated heartbeat-state.json with current timestamp
+- System: Updated heartbeat-state.json with current timestamps
 - Action: completed heartbeat poll; logging to memory file.
