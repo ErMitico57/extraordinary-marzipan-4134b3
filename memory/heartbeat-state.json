@@ -1,13 +1,13 @@
 {
-  "heartbeat": 1784979125,
+  "heartbeat": 1784984528,
   "lastChecks": {
-    "email": 1784979125,
-    "calendar": 1784979125,
-    "weather": 1784979125,
-    "concepts": 1784979125,
-    "website": 1784979125,
-    "heartbeat": 1784979089,
-    "main_site": 1784979125,
-    "conversations": 1784979125
+    "email": null,
+    "calendar": null,
+    "weather": null,
+    "concepts": 1784984528,
+    "website": null,
+    "heartbeat": 1784984528,
+    "main_site": null,
+    "conversations": 1784982661
   }
 }
