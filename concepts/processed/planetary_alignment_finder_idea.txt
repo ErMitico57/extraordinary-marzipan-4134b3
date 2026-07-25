@@ -1,2 +1,2 @@
 Concept: planetary alignment finder
-Description: A planetary alignment finder that shows upcoming pl
+Description: A planetary alignment tool that lets users input a date range to find upcoming alignments of planets in the solar system, displaying the results in a list with a visual orrery or solar system diagram.
