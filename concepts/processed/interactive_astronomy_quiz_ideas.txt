@@ -1,2 +1,2 @@
 Concept: interactive astronomy quiz ideas
-Description: An interactive quiz where each question appears as an orbiting planet or star; users select the correct answer by clicking the celestial body, receiving immediate feedback and a fun astronomical fact.
+Description: An interactive quiz that tests users' knowledge of astronomy with multiple-choice questions, instant feedback, and a scoring system.
