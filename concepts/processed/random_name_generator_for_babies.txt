@@ -1,0 +1,2 @@
+Concept: random name generator for babies
+Description: A fun tool that generates random baby names based on origin, meaning, or popularity, with options to filter by gender.

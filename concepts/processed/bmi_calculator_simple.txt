@@ -1,0 +1,2 @@
+Concept: BMI calculator simple
+Description: A simple calculator that computes Body Mass Index (BMI) from weight and height, with category classification (underweight, normal, overweight, obese).

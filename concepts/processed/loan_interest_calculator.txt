@@ -1,0 +1,2 @@
+Concept: loan interest calculator
+Description: A calculator that computes monthly payments and total interest for a loan given principal, interest rate, and term.

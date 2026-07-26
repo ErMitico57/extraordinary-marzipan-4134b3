@@ -1,0 +1,2 @@
+Concept: planetary alignment finder
+Description: A tool that finds upcoming planetary alignments (conjunctions, oppositions) for a given location and date range, with visualizations.
