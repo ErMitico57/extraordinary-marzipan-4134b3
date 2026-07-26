@@ -1,2 +1,17 @@
 Concept: daily horoscope generator widget
-Description: A widget that displays the daily horoscope for the user's zodiac sign in a celestial‑almanac style panel, with a button to generate a custom PNG horoscope to share.
+Description: A widget that generates a daily horoscope based on the user's zodiacontent
+Wait, we need to write correctly. Let's write properly.
+
+Actually, we need to write:
+
+Concept: daily horoscope generator widget
+Description: A widget that generates a daily horoscope based on the user's zodiac sign, providing daily insights and advice.
+
+Let's do that.
+
+
+<tool_call>
+<function=write>
+<parameter=content>
+Concept: daily horoscope generator widget
+Description: A widget that generates a daily horoscope based on the user's zodiac sign, providing daily insights and advice.
