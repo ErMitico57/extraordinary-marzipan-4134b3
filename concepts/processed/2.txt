@@ -1,0 +1,1 @@
+A daily horoscope generator that provides personalized horoscopes based on user's zodiac sign, birth date, and current planetary positions, featuring a mystical night‑sky design.

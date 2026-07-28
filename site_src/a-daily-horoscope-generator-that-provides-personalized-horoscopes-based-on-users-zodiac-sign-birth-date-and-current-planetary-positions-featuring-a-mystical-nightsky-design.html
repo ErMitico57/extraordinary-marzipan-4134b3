@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A daily horoscope generator that provides personalized horoscopes based on user's zodiac sign, birth date, and current planetary positions, featuring a mystical night‑sky design.</title>
+<meta name="description" content="A daily horoscope generator that provides personalized horoscopes based on user's zodiac sign, birth date, and current planetary positions, featuring a mystical night‑sky design." />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div id="ads-container"></div>
+<div class="content" style="max-width:800px;margin:2rem auto;padding:1rem;">
+<h1>A daily horoscope generator that provides personalized horoscopes based on user's zodiac sign, birth date, and current planetary positions, featuring a mystical night‑sky design.</h1>
+<p>A daily horoscope generator that provides personalized horoscopes based on user's zodiac sign, birth date, and current planetary positions, featuring a mystical night‑sky design.</p>
+</div>
+<script>
+  fetch('/_ads.html')
+    .then(r => r.text())
+    .then(html => { document.getElementById('ads-container').innerHTML = html; });
+</script>
+</body>
+</html>

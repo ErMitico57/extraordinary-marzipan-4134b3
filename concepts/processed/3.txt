@@ -1,0 +1,1 @@
+An interactive moon phase calculator that shows the current moon phase for any given date, with illustrations of the moon and details about illumination, rise/set times, and next phases.
