@@ -314,3 +314,20 @@ JULY 18, 2026 - ENHANCEMENTS:
 - Memory maintenance: reviewed recent concept files and memory logs; updated heartbeat logs and state.
 - Weather at 20:00 CEST: Berlin 🌤️ +21°C (from wttr.in).
 - Key insight: System demonstrates resilience - core functions (heartbeat logging, memory updates, git version control) continue operating normally even when external API-dependent features are unavailable due to service quotas.
+-e 
+## July 27, 2026
+- Heartbeat checks performed throughout the day (every 30 minutes) via cron-event.
+- Website and main site checks skipped due to Oxylabs balance insufficiency.
+- Concept queue: 0 pending, 37 processed (all 10 concepts from July 26 have been processed).
+- Baby-name-generator micro-experience live and linked from homepage.
+- Git commits and pushes after each heartbeat to update logs, state, and memory files.
+- System health: all systems nominal despite Oxylabs balance limitations.
+
+## July 28, 2026
+- Heartbeat checks performed at 02:30 CEST (cron-event).
+- SOUL.md, USER.md, memory files read.
+- Website and main site checks skipped due to Oxylabs balance insufficiency.
+- Concept queue: 0 pending, 37 processed.
+- Updated heartbeat state, memory logs, and HEARTBEAT.md.
+- Committed and pushed changes to git.
+- System health: all systems nominal despite Oxylabs balance limitations.
