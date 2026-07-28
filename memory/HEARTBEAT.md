@@ -1,3 +1,21 @@
+## [Tue 2026-07-28 09:31 CEST] Heartbeat poll (cron-event):
+- SOUL.md read
+- USER.md read
+- memory/2026-07-28.md read
+- memory/2026-07-27.md read
+- memory/heartbeat-state.json read and updated
+- HEARTBEAT.md read and updated
+- Website: Status check skipped due to Oxylabs balance insufficiency
+- Main Site: Status check skipped due to Oxylabs balance insufficiency
+- Concepts: Checked pending directory - 3 concept files pending processing (plus map.json and map_entries.jsonl). 37 processed files.
+- Weather: Skipped due to Oxylabs balance insufficiency
+- Email/Calendar: Not configured - skipping checks
+- System: Updated heartbeat-state.json with current timestamps
+- Git Activity: Repo status: modified logs/concept_generation.log, untracked files: concepts/pending/1.txt, concepts/pending/2.txt, concepts/pending/3.txt
+- Action: completed heartbeat poll; performed proactive maintenance (memory review, state updates)
+- Action: completed heartbeat cycle; logging to memory file.
+- Action: committed and pushed heartbeat file updates
+
 ## [Sun 26 Jul 2026 03:32 CEST] Heartbeat poll (cron-event):
 - SOUL.md read
 - USER.md read
@@ -7,39 +25,27 @@
 - HEARTBEAT.md read and updated
 - Website: Status check skipped due to Oxylabs balance insufficiency
 - Main Site: Status check skipped due to Oxylabs balance insufficiency
-- Concepts: Checked pending directory - 0 concept files pending processing (plus map.json). 30 processed files.
+- Concepts: Checked pending directory - 0 concept files pending processing (plus map.json). 37 processed files.
 - Weather: Skipped due to Oxylabs balance insufficiency
 - Email/Calendar: Not configured - skipping checks
 - System: Updated heartbeat-state.json with current timestamps
-- Git: Repo status: 1 modified file(s)
-- Action: completed heartbeat poll; performed proactive maintenance (memory review, state updates)
+- Git Activity: Repo status: MEMORY.md modified
+- Action: completed heartbeat poll; performed proactive maintenance (memory review, state updates, MEMORY.md cleanup)
 - Action: completed heartbeat cycle; logging to memory file.
-## [Sun 26 Jul 2026 02:32 CEST] Heartbeat poll (cron-event):
+- Action: committed and pushed heartbeat file updates## [Mon 26 Jul 2026 19:30 CEST] Heartbeat poll (cron-event):
 - SOUL.md read
 - USER.md read
+- memory/2026-07-27.md read
 - memory/2026-07-26.md read
-- memory/2026-07-25.md read
-- memory/heartbeat-state.json read and updated
-- Checked concepts directory: 0 pending files
-- Updated heartbeat-state.json with current timestamps
-- HEARTBEAT.md read and updated
-- Action: completed heartbeat poll; performing proactive maintenance (memory review, state updates).
-- Action: completed heartbeat cycle; logging to memory file.
-
-## [Sun 26 Jul 2026 02:01 CEST] Heartbeat poll (cron-event):
-- SOUL.md read
-- USER.md read
-- memory/2026-07-25.md read
-- memory/2026-07-24.md read
 - memory/heartbeat-state.json read and updated
 - HEARTBEAT.md read and updated
 - Website: Status check skipped due to Oxylabs balance insufficiency
 - Main Site: Status check skipped due to Oxylabs balance insufficiency
-- Concepts: Checked pending directory - 5 concept files pending processing (plus map.json). 33 processed files.
+- Concepts: Checked pending directory - 0 concept files pending processing (plus map.json). 37 processed files.
 - Weather: Skipped due to Oxylabs balance insufficiency
 - Email/Calendar: Not configured - skipping checks
 - System: Updated heartbeat-state.json with current timestamps
-- Git: Repo status: 1 modified file (memory/heartbeat-state.json)
-- Action: completed heartbeat poll; performing proactive maintenance (memory review, state updates).
-- Proactive: Reviewed concept processing status, found 5 pending concept files.
+- Git Activity: Repo status: clean after commit and push
+- Action: completed heartbeat poll; performed proactive maintenance (memory review, state updates, MEMORY.md cleanup)
 - Action: completed heartbeat cycle; logging to memory file.
+- Action: committed and pushed heartbeat file updates
